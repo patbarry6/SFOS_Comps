@@ -1,0 +1,22 @@
+\contentsline {section}{\numberline {1}A Brief History of the field of Genetics}{3}
+\contentsline {section}{\numberline {2}DNA - a review}{3}
+\contentsline {subsection}{\numberline {2.1}DNA as the hereditary material}{3}
+\contentsline {subsection}{\numberline {2.2}DNA structure}{3}
+\contentsline {subsection}{\numberline {2.3}Transcription}{3}
+\contentsline {subsection}{\numberline {2.4}Translation}{3}
+\contentsline {section}{\numberline {3}Molecular Genetic Methods \& Applications}{4}
+\contentsline {subsection}{\numberline {3.1}Phenotypic Data}{4}
+\contentsline {subsection}{\numberline {3.2}Codominant Phenotypic Data}{4}
+\contentsline {subsection}{\numberline {3.3}Mitochondrial DNA (mtDNA)}{4}
+\contentsline {subsubsection}{\numberline {3.3.1}History and Description}{4}
+\contentsline {subsubsection}{\numberline {3.3.2}Use in phylogenetics and population genetics}{5}
+\contentsline {subsection}{\numberline {3.4}Allozymes \& Isozymes}{6}
+\contentsline {subsection}{\numberline {3.5}Restriction Length Polymorphisms (RFLPs)}{6}
+\contentsline {subsubsection}{\numberline {3.5.1}DNA barcoding}{6}
+\contentsline {subsection}{\numberline {3.6}Microsatellites \& Minisatellites}{6}
+\contentsline {subsection}{\numberline {3.7}Sequencing}{6}
+\contentsline {subsubsection}{\numberline {3.7.1}Sanger Method}{6}
+\contentsline {subsubsection}{\numberline {3.7.2}Pyrosequencing}{6}
+\contentsline {subsubsection}{\numberline {3.7.3}RADsequencing}{6}
+\contentsline {subsection}{\numberline {3.8}Single Nucleotide Polymorphisms (SNPs)}{7}
+\contentsline {subsubsection}{\numberline {3.8.1}Genotyping by sequencing}{7}
