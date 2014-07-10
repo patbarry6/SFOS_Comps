@@ -1,11 +1,15 @@
 \documentclass[11pt, oneside]{article}   	
 \usepackage{geometry}                		
 \geometry{letterpaper}                   		
-\usepackage{graphicx}														
+\usepackage{graphicx}												
 \usepackage{amssymb}
 \usepackage{amsmath}
 \usepackage[utf8]{inputenc}
 \usepackage{float}
+\usepackage{subcaption}
+
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows,chains}
 
 \title{Comprehensive Exam Notes}
 \author{Patrick Dylan Barry}
@@ -24,7 +28,9 @@ methodologies and applications. This list scared the bejezus out of me, and so I
  that a good way of studying for these exams would be to create a short book that 
 might aid in my preparation and be a good resource for the future. I think this should be worthwhile even
 if nothing more grows out of this than a study guide for my exams or possibly lecture notes for a course I 
-instruct. 
+instruct. A major consequence of this is that many of the examples that I will use come from salmon. Similarly,
+many of the first few sections come from lecture notes that I took while in Tony Gharrett's Introduction to Genetics Course. 
+
 \newpage
 
 \tableofcontents
@@ -63,7 +69,9 @@ In this section I will briefly review the discovery of DNA and review basic prin
 understanding of preceding chapters. 
 \subsection{DNA as the hereditary material}
 Major experiments that lead to the discovery of DNA as the hereditary material. 
-Biological molecule mediates inheritance. Possibilites - Carbohydrate/polysaccharide,lipid, protein, nucleic acid
+Biological molecule mediates inheritance. 
+
+Possibilites - Carbohydrate/polysaccharide,lipid, protein, nucleic acid
 Griffiths 1928
 Dawson 1931
 Alloway 1933
@@ -86,12 +94,26 @@ Brief description of mRNA to protein
 
 \subsection{Codominant Phenotypic Data}
 
+
+
+
+
+
+
+
+
+
+
+
+
 \subsection{Mitochondrial DNA (mtDNA)}
 \subsubsection{History and Description}
 Mitochondrial DNA (mtDNA) is, as its name suggests, DNA that is found within the mitochondria.
-First described by Carl Benda in 1898, mitochondria are organelles found in most eukaryotic cells (plants, animals, and 
+Coined by Carl Benda in 1898, the word mitochondrion comes from the Greek word \textit{mitos} 
+meaning ``thread" and \textit{khondrion} meaning ` `little granule''. Mitochondria are organelles 
+found in most eukaryotic cells (plants, animals, and 
 fungi) that generate adenosine triphosphate (ATP) from the phosphorylation of ADP through
-cellular respiration. Details about the citric acid cycle (Krebs cycle) and the electron transport
+cellular respiration. Details about the citric acid cycle (Krebs cycle) and the electron transport % should I add that mtDNA was discovered by two teams of scientists?%
 chain which take pyruvate (the product of glycolysis) to produce ATP are covered in most 
 introductory biology text books and are ommitted here. 
 
@@ -104,7 +126,7 @@ freeliving cyanobacteria. The theory was later formalized by Mereschkowski, a Ru
 Mitochondrial DNA is predominantly maternally inherited. There are a few explainations as to why
 this is the case. Mere dilution might be responsible. The egg has upwards of 1,000,000 mtDNA molecules
 while sperm have a high estimate of 1,000. The mtDNA on sperm is located on the tail to fuel the beating
-of the flagellum. When the acrosome reaction occurs, the tail may not enter the egg effectively eliminating
+of the flagellum. When the acrosome reaction occurs, the tail may not enter the egg, effectively eliminating
 the opportunity to pass on the male mtDNA. In 1999, it was reported by Sutovsky et al. that male
 mtDNA is tagged with ubiquitin to mark them for later destruction in the embryo. 
 
@@ -112,16 +134,55 @@ Mitochonrial DNA in multicellular organisms is cirular and double stranded. In u
 is linearly organized DNA with telomeres and telemorase. In mammals, mtDNA encodes 37 genes (13 proteins, 
 22 tRNAs, and the large and small subunits of the rRNA). The guanine rich strand, referred to
 as the heavy strand (H-strand) encodes 28 genes, while the cytosine rich strand or light strand (L-strand)
-endoceds the 9 other genes.  
+endoceds the 9 other genes. In addition to these coding regions is the control region (CR) that is
+responsible for initiating replication and transcription.
 
-\begin{figure}[H]
-\begin{center}
-    \includegraphics[width=25em]{images/mtDNA.pdf}   
-    \caption{Structure of mammalian mtDNA molecule. The green segments represent the 13 protein genes,
-the yellow segments are the tRNA genes, and the orange are the rRNA subunits.}
-    \label{fig:mtDNA}
-\end{center}
+\begin{figure}[htb]
+\centering
+  \begin{subfigure}[b]{.5\linewidth}
+    \centering
+    \includegraphics[width=.99\textwidth]{images/mito.pdf}
+    \caption{}\label{fig:mtDNA1}
+  \end{subfigure}%   
+  \begin{subfigure}[b]{.5\linewidth}
+    \centering
+    \includegraphics[width=.99\textwidth]{images/mtDNA.pdf}
+    \caption{}\label{fig:mtDNA2}
+  \end{subfigure}%     
+  \caption{(a) A mitochondrion with three circular DNA strands located within the mitochondrial matrix
+  (b) Structure of mammalian mtDNA molecule. The green segments represent the 13 protein genes,
+the yellow segments are the tRNA genes, and the orange are the rRNA subunits.}\label{fig:mtDNA}
 \end{figure}
+
+\subsubsection{Evolution of mtDNA molecule}
+The bacterial genome from which mtDNA arose has gradually shrunk over time. Genes from the 
+original genome have been transfered either to the nucleus or to other organelles. As genes are 
+transposed to the nucleus a copy can remain in the mitochondria making nuclear-mitocondrial dna 
+(\textbf{numts}).  
+
+Small variations in mtDNA length is generally a result of homopolymer tracts generated by replication 
+slippage. 
+
+Aerobic respiration takes place within the mitochondria and a major byproduct of ATP synthesis are
+reactive oxygen species, specifically superoxide and hydrogen peroxide. These free radicals produce a 
+highly mutagenic envornment for mtDNA. This coupled with
+a limited repair mechanism leads to a much higher mutation fixation rate. Mutation rates vary among taxa.
+A universal molecular clock cannot be assumed. There also exists quite a
+bit of heterogeneity in mutaiton rate among mtDNA loci. The 12s and 16s rDNAs are more conserved
+than the CR. This is due to functional constraints on the proteins encoded.
+The CR for vertebrates is often divided into three parts based on base composition and mutational
+model (Review Saunders \& Edwards Molecular Evolution 2000 51 97-109).  
+
+Transitions are more common than tranversions
+
+
+Gene content and order has remained conserved among vertebrates, but some rearrangements have
+been observed  
+
+Zhang and Hewitt 2003 ``mitochondrial DNA can be the cause of fortune, regret or headache'' in describing
+the selection of mtDNA over other marker types. In plants the mutational rate is very slow Wolfe 1987, but 
+it seems that mutational rates for plants is highly variable. Cho, Y 2004 show some of the highest mutational
+rates in plants! Very high recombination rate Palmer and Herbon 1988. 
 
 \hrule
 
@@ -136,8 +197,7 @@ that you can remove with a hypodermic needle and purify further with dialysis.
 related to cytoplasmic genes now also exist as functionless derivaties in the nuclear genome 
 Paralogous pseudogenes can wreak havoc on phylogenetic inference if they aren't accounted for. 
 
-'control region' responsible for initiating replication and transcription.
-variation exists in gene order and content useful in macrophylogeny. 
+
 
 for the most part homoplasmic -> single mtDNA sequence predominates all cells of tissues in the 
 organism
@@ -147,7 +207,45 @@ organism
 \hrule
 
 \subsubsection{Use in phylogenetics and population genetics}
+
+Mitocondrial psuedogens in the nuclear gemone complicate their use in population genetic studies. Lucily, 
+back in the day geneticists used to isolate mtDNA from all nuclear DNA making this a moot point.  
 The analysis of mtDNA has been a mainstay of phylogenetics since XXXX and is still being used 
+mtDNA is a single molecule and as such represents loci that are completely linked. 
+Despite differences in the mutational rate among loci, it is just one look 
+at the evolutionary history. Stochastic processes such as drift as well as selection will influence all mitochondrion
+loci. This look is also only the matrilineal history. Some studies have used both mtDNA
+and noncombining regions of the Y chromosome to look at population structure differences among sexes. The effective
+population size of mtDNA is at most (if we have 1:1 sex ratios) 1/4 that of nuclear autosomal DNA. A lower 
+effective population size results in a faster lineage sorting rate and higher allele extinction rate. % rewrite this sentence to make it clearer! 
+
+Variation among individuals within and among populaitons.
+Recent events - colonization, introductions and population bottlenecks
+
+Two issues:
+Incomplete lineage sorting can lead to discordanent gene and species trees constructued using mtDNA genotypes. 
+
+Differential introgression
+If two species existed we can imagine there being nuclear loci that are responsible for their reproductive isolation.
+Patterns of introgression for nuetral nuclear loci will depend on how tightly linked they are to the markers 
+responsible for isolation. mtDNA is unlinked to nuclear DNA and consequently the introgression of mtDNA variants 
+will be much greater than for nuclear DNA. % good example of this from polar bears???
+As a result inferences made from nuclear and mtDNA will be discordant. 
+
+
+
+\subsubsection{DNA Barcoding}
+Recently, COI sequence analysis (termed DNA barcoding) has been sug- gested as a tool for the identification of specimens Hebert et al., 2004 and holds potential to aid in the discrimination of new species DeSalle, Egan \& Siddall, 2005.
+Due to incomplete lineage sorting the COI gene may not reflect the true relationships among species. This is one of the various critiques of using a single locus for species delineation (Moritz \& Cicero, 2004; Meyer \& Paulay, 2005; Will, Mishler \& Wheeler, 2005). 
+
+
+
+
+
+
+
+
+
 
 \subsection{Allozymes \& Isozymes}
 Lacking the ability to look directly at the entire genome, early genetic studies relied on small bits of translated 
@@ -179,9 +277,6 @@ The strength of allozymes
 
 Cons: only observe non-synonous mutations, only look at water soluble proteins, 
 \subsection{Restriction Length Polymorphisms (RFLPs)}
-
-
-\subsubsection{DNA barcoding}
 
 
 \subsection{Microsatellites \& Minisatellites}
