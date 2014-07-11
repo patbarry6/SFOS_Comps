@@ -1,0 +1,384 @@
+\documentclass{article}  
+\lstset{breaklines=true} 	
+\usepackage{geometry}                		
+\geometry{letterpaper}                   		
+\usepackage{graphicx}												
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc}
+\lstset{language=R}
+\usepackage{listings}
+\usepackage{float}
+\usepackage{subcaption}
+
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows,chains}
+
+<<setup, include=FALSE, cache=FALSE>>=
+library(knitr)
+opts_chunk$set(fig.path = 'images/listings-')
+options(tidy=TRUE,replace.assign = TRUE)
+render_listings()
+@
+
+\title{Comprehensive Exam Notes}
+\author{Patrick Dylan Barry}
+						
+
+\begin{document}
+\maketitle
+\abstract{}
+During my Ph.D. at the University of Alaska Fairbanks I needed to study for comprehensive exams.
+My committee made up of Anthony Gharrett, Megan McPhee, David Tallmon, and Eric Anderson 
+were tasked with choosing topics that I needed to master in order to graduate and continue on the 
+Ph.D. track. During my first committee meeting they made a list of topics: Relationship/Parentage analysis,
+population genetic theory, coalescence, inference models for molecular ecology, population conservation 
+genetics as applied to fisheries management, evolutionary ecology of Pacific salmon, and molecular genetic 
+methodologies and applications. This list scared the bejezus out of me, and so I decided 
+ that a good way of studying for these exams would be to create a short book that 
+might aid in my preparation and be a good resource for the future. I think this should be worthwhile even
+if nothing more grows out of this than a study guide for my exams or possibly lecture notes for a course I 
+instruct. A major consequence of this is that many of the examples that I will use come from salmon. Similarly,
+many of the first few sections come from lecture notes that I took while in Tony Gharrett's Introduction to Genetics Course. 
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+\section{A Brief History of the field of Genetics}
+Hooke (1665) coins the term 'cell' after observing cellular structure in cork.
+
+Anton van Leeuwenhoek (1670s) invents compound-like microscope - observes animalcules.
+
+Schwann (1847) - proposes animals made of tissues which were constructed of 'cells'
+Matthias Jakob Schleiden - plant cell structure - cells appear to be building blocks for complex organisms
+
+Spontaneous generation
+Redi - flies prevented from laying eggs = no maggots
+Spallanzani - boiling hay infusion no animalcules
+Pasteur and Tyndall - put it to rest
+ 
+ Pangenesis -
+ Aristotle eggs and sperm interact in mysterious way
+ Hertwig used sea urchins to show developing embryo
+ Strssburger did the same in plants - nucleus was important. 
+ 
+ Fixity of Species - Linnaeus 
+ 
+ Chromossomes - late 1800's 
+ Boveri
+ Henkens
+ Montgomery
+ 
+ Correns and deVries discover Mendels work. 
+
+\section{DNA - a review}
+In this section I will briefly review the discovery of DNA and review basic principles that will facilitate the 
+understanding of preceding chapters. 
+\subsection{DNA as the hereditary material}
+Major experiments that lead to the discovery of DNA as the hereditary material. 
+Biological molecule mediates inheritance. 
+
+Possibilites - Carbohydrate/polysaccharide,lipid, protein, nucleic acid
+Griffiths 1928
+Dawson 1931
+Alloway 1933
+Avery, McCarty \& MacLeod 1944
+Hershey\&Chase 1952
+Fraenkel-Conrat and Singer 1957
+Chargaff 1950
+Linus Pauling
+Watson/Crick/Franklin
+\subsection{DNA structure}
+Nucleotides - Nucleosides etc. 
+\subsection{Transcription}
+Brief description of DNA to mRNA
+\subsection{Translation}
+Brief description of mRNA to protein
+
+\section{Molecular Genetic Methods \& Applications}
+
+\subsection{Phenotypic Data}
+
+\subsection{Codominant Phenotypic Data}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection{Mitochondrial DNA (mtDNA)}
+\subsubsection{History and Description}
+Mitochondrial DNA (mtDNA) is, as its name suggests, DNA that is found within the mitochondria.
+Coined by Carl Benda in 1898, the word mitochondrion comes from the Greek word \textit{mitos} 
+meaning ``thread" and \textit{khondrion} meaning ` `little granule''. Mitochondria are organelles 
+found in most eukaryotic cells (plants, animals, and 
+fungi) that generate adenosine triphosphate (ATP) from the phosphorylation of ADP through
+cellular respiration. Details about the citric acid cycle (Krebs cycle) and the electron transport % should I add that mtDNA was discovered by two teams of scientists?%
+chain which take pyruvate (the product of glycolysis) to produce ATP are covered in most 
+introductory biology text books and are ommitted here. 
+
+Nuclear and mtDNA have different evolutionary histories. It is theorized that mtDNA was derived from
+the circular genome of an endosymbiotic bacteria ~1.5 billion years ago. This theory was first 
+described by Schimper who in 1883 noticed striking similarties between chroplasts within green plants and 
+freeliving cyanobacteria. The theory was later formalized by Mereschkowski, a Russian botanist, in 1910 and 
+ further advanced by Lynn Margulis in 1967. 
+
+Mitochondrial DNA is predominantly maternally inherited. There are a few explainations as to why
+this is the case. Mere dilution might be responsible. The egg has upwards of 1,000,000 mtDNA molecules
+while sperm have a high estimate of 1,000. The mtDNA on sperm is located on the tail to fuel the beating
+of the flagellum. When the acrosome reaction occurs, the tail may not enter the egg, effectively eliminating
+the opportunity to pass on the male mtDNA. In 1999, it was reported by Sutovsky et al. that male
+mtDNA is tagged with ubiquitin to mark them for later destruction in the embryo. 
+
+Mitochonrial DNA in multicellular organisms is cirular and double stranded. In unicellular organisms mtDNA
+is linearly organized DNA with telomeres and telemorase. In mammals, mtDNA encodes 37 genes (13 proteins, 
+22 tRNAs, and the large and small subunits of the rRNA). The guanine rich strand, referred to
+as the heavy strand (H-strand) encodes 28 genes, while the cytosine rich strand or light strand (L-strand)
+endoceds the 9 other genes. In addition to these coding regions is the control region (CR) that is
+responsible for initiating replication and transcription.
+
+\begin{figure}[htb]
+\centering
+  \begin{subfigure}[b]{.5\linewidth}
+    \centering
+    \includegraphics[width=.99\textwidth]{images/mito.pdf}
+    \caption{}\label{fig:mtDNA1}
+  \end{subfigure}%   
+  \begin{subfigure}[b]{.5\linewidth}
+    \centering
+    \includegraphics[width=.99\textwidth]{images/mtDNA.pdf}
+    \caption{}\label{fig:mtDNA2}
+  \end{subfigure}%     
+  \caption{(a) A mitochondrion with three circular DNA strands located within the mitochondrial matrix
+  (b) Structure of mammalian mtDNA molecule. The green segments represent the 13 protein genes,
+the yellow segments are the tRNA genes, and the orange are the rRNA subunits.}\label{fig:mtDNA}
+\end{figure}
+
+\subsubsection{Evolution of mtDNA molecule}
+The bacterial genome from which mtDNA arose has gradually shrunk over time. Genes from the 
+original genome have been transfered either to the nucleus or to other organelles. As genes are 
+transposed to the nucleus a copy can remain in the mitochondria making nuclear-mitocondrial dna 
+(\textbf{numts}).  
+
+Selection for small genome size. Selective size advantage of faster replication
+
+Small variations in mtDNA length is generally a result of homopolymer tracts generated by replication 
+slippage. Larger differences may be due to duplication or deletions -> might be due to slippage as well?
+
+Aerobic respiration takes place within the mitochondria and a major byproduct of ATP synthesis are
+reactive oxygen species, specifically superoxide and hydrogen peroxide. These free radicals produce a 
+highly mutagenic envornment for mtDNA. This coupled with
+a limited repair mechanism leads to a much higher mutation fixation rate. Mutation rates vary among taxa.
+A universal molecular clock cannot be assumed. There also exists quite a
+bit of heterogeneity in mutaiton rate among mtDNA loci. The 12s and 16s rDNAs are more conserved
+than the CR. This is due to functional constraints on the proteins encoded.
+The CR for vertebrates is often divided into three parts based on base composition and mutational
+model (Review Saunders \& Edwards Molecular Evolution 2000 51 97-109).  
+
+Transitions are more common than tranversions
+
+
+Gene content and order has remained conserved among vertebrates, but some rearrangements have
+been observed. Comparisions of sea urchins and vertebrates show that tRNA genes are highly mobile with 
+tanspositions and inversions occuring.  
+
+Zhang and Hewitt 2003 ``mitochondrial DNA can be the cause of fortune, regret or headache'' in describing
+the selection of mtDNA over other marker types. In plants the mutational rate is very slow Wolfe 1987, but 
+it seems that mutational rates for plants is highly variable. Cho, Y 2004 show some of the highest mutational
+rates in plants! Very high recombination rate Palmer and Herbon 1988. 
+
+\hrule
+
+- 1970s to 1990 RFLP analysis of mtDNA dominated phylogenetics
+- swtiched to DNA sequencing of mtDNA
+- you can isolate mtDNA from other DNA by efficiently sparation of cytoplasm from cell nuclei.
+Soft tissue is minced, homogenized and centrifuged at low speed (700 x g) to remove nuclei and cellular debris.
+then centriguation at higher speed 20,000 x g pellets mitochondria.
+CsCl-EtBr gradient centrifugation at speeds in excess of 160,000 x g makes mtDNA appear as a discete band 
+that you can remove with a hypodermic needle and purify further with dialysis. 
+- this was particularly fortuitous because organelle DNA can be transfered to the nucleus- sequences 
+related to cytoplasmic genes now also exist as functionless derivaties in the nuclear genome 
+Paralogous pseudogenes can wreak havoc on phylogenetic inference if they aren't accounted for. 
+
+
+
+for the most part homoplasmic -> single mtDNA sequence predominates all cells of tissues in the 
+organism
+new muation add to a hteroplasmic condition - 2 genotypes in 1 individual. Not really the case!
+mutations accumulate rapidly in nucleotide positions that have less selective constraints - protein coding
+then decrease Brown et al 1979. -> rapid evolving sequences are more useful for population level studies
+
+
+
+
+\hrule
+
+\subsubsection{Use in population genetics and phylogenetics}
+Variation among individuals within and among populaitons. 1970s to 1990 restriction length polymorphism (RFLP)
+analysis of mtDNA dominated phylogenetics. 'Raw data' was restriction fragment digestion profiles - or restriction maps.
+The presence/absence of restriction sites could be used as qualitative data for parsimony trees. 
+
+Maternally inherited means it is a 
+promising marker for population genetics. Recent events - colonization, introductions and population bottlenecks
+sex biased dispersal
+Assumes neutrality and negligible back-mutation. 
+
+
+Mitocondrial psuedogens in the nuclear gemone complicate their use in population genetic studies. Lucily, 
+back in the day geneticists used to isolate mtDNA from all nuclear DNA making this a moot point.  
+
+The analysis of mtDNA has been a mainstay of phylogenetics since XXXX and is still being used 
+mtDNA is a single molecule and as such represents loci that are completely linked. 
+Despite differences in the mutational rate among loci, it is just one look 
+at the evolutionary history. Stochastic processes such as drift as well as selection will influence all mitochondrion
+loci. This look is also only the matrilineal history. Some studies have used both mtDNA
+and noncombining regions of the Y chromosome to look at population structure differences among sexes. The effective
+population size of mtDNA is at most (if we have 1:1 sex ratios) 1/4 that of nuclear autosomal DNA. A lower 
+effective population size results in a faster lineage sorting rate and higher allele extinction rate. % rewrite this sentence to make it clearer!
+Selection not a huge deal if character states (nucleotides) are still synapomorphic. Does effect estimation 
+of divergence times though!
+
+
+Two issues:
+Incomplete lineage sorting can lead to discordanent gene and species trees constructued using mtDNA genotypes. 
+
+If a female has all male offspring that mtDNA lineage ends after that generation. Let's assume that females produce daughters
+according to a Poisson distribution with $\lambda = \mu$. The probability that a female will have no offspring in the next generation
+is simply $exp^{-\mu}$ (see below). 
+
+\begin{gather}
+  P(\theta)=\frac{1}{\theta!}\lambda^\theta exp^{-\lambda}, \; E(\theta)=\lambda \ \,\&\, var(\theta)=\lambda \\
+ P(0)=\frac{1}{0!}\mu^0 exp^{-\mu} \\
+ P(0)= exp^{-\mu}
+\end{gather}
+
+<<warning=FALSE,message=FALSE,fig.show='hide'>>=
+#R code showing probability of losing an mtDNA lineage after 1 generation
+off<-seq(from=0,to=10,by=0.25) # range of offpring you might have
+d<-dpois(x=0,lambda=off) # calculate prob of 0 daughters for # offpring
+plot(x=off,y=d,xlab='Number of female offspring produced',ylab='Probability of having only sons',type="l")
+# R code showing how many maternal lineages are lost depending on how many
+# female offering on average are left (u)
+gen<-seq(from=1,to=100,by=1)
+u<-c(0,0.5,1,1.5,2)
+PSA<-matrix(data=NA,ncol=length(gen),nrow=length(u))
+for (fo in 1:length(u)){
+for (g in 1:length(gen)){ 
+  if (g==1){PSA[fo,g]<-exp(-u[fo])
+} else {
+  PSA[fo,g]<-exp(u[fo]*(PSA[fo,g-1]-1))
+}#else
+  }#loop over fo
+}#loop over g
+plot(x=gen,y=PSA[1,],xlab='Generations',ylab='Probability maternal mtDNA genotype is lost',type="l",ylim=c(0,1))
+for (p in 2:nrow(PSA)){
+  points(x=gen,y=PSA[p,],type="l",lty=p)
+}
+legend(x='topright',inset=c(.01,0.1),bty='n',legend=c(paste('u','=',u,sep=" ")),lty=seq(from=1,to=nrow(PSA),by=1),)
+@
+%Insert figure with both of the plots constructed above
+\begin{figure}[htb]
+\centering
+  \begin{subfigure}[b]{.5\linewidth}
+    \centering
+    \includegraphics[width=.99\textwidth]{images/listings-unnamed-chunk-11.pdf}
+    \caption{}\label{fig:chunk-11}
+  \end{subfigure}%   
+  \begin{subfigure}[b]{.5\linewidth}
+    \centering
+    \includegraphics[width=.99\textwidth]{images/listings-unnamed-chunk-12.pdf}
+    \caption{}\label{fig:chunk-12}
+  \end{subfigure}%     
+  \caption{(a) If we assume that females in a population produce female offspring according to
+  the Poisson distribution with mean $\mu$, we can calculate the probability that a female mtDNA
+  lineage is lost after one generation according to equation 3. It is fairly intuitive that the more female offspring
+  produced, the higher then chance that a mtDNA haplotype lineage persists to the next generation. If on average
+  only 1 female offspring is left, then there is a \Sexpr{round(d[5],2)*100}\% probability that the no daughters will
+  be produced ending the mtDNA lineage for that family. We can also think of this in terms of how many maternal
+  lineages will not persist. 
+  (b) We can expand this and look at the persistence of mtDNA lineages through time. We can vary the average number
+  of daughters produced by females ($\mu$). Again it is not surprising that if on average few daughters are produced, the
+  time that it takes for an mtDNA lineage to go extinct is very short.}\label{fig:mtDNA_haplo_loss}
+\end{figure}
+
+
+Differential introgression
+If two species existed we can imagine there being nuclear loci that are responsible for their reproductive isolation.
+Patterns of introgression for nuetral nuclear loci will depend on how tightly linked they are to the markers 
+responsible for isolation. mtDNA is unlinked to nuclear DNA and consequently the introgression of mtDNA variants 
+will be much greater than for nuclear DNA. % good example of this from polar bears???
+As a result inferences made from nuclear and mtDNA will be discordant. 
+
+
+
+\subsubsection{DNA Barcoding}
+Recently, COI sequence analysis (termed DNA barcoding) has been sug- gested as a tool for the identification of specimens Hebert et al., 2004 and holds potential to aid in the discrimination of new species DeSalle, Egan \& Siddall, 2005.
+Due to incomplete lineage sorting the COI gene may not reflect the true relationships among species. This is one of the various critiques of using a single locus for species delineation (Moritz \& Cicero, 2004; Meyer \& Paulay, 2005; Will, Mishler \& Wheeler, 2005). 
+
+
+
+
+
+
+
+
+
+
+\subsection{Allozymes \& Isozymes}
+Lacking the ability to look directly at the entire genome, early genetic studies relied on small bits of translated 
+genomic regions. DNA is transcribed to mRNA which is then translated to protein (See Chapter 2). Consequently,
+proteins represent a way of looking at variation within DNA sequences. Proteins are polypeptides 
+composed of strings of amino acids joined by covalent peptide bonds. Mutations within the protein coding 
+regions can lead to different amino acids being incorporated into the polypeptide. Two general types of enzymes 
+have been studied extensively:  isozymes and allozymes.  \textbf{isozymes} are all functionally similar forms of 
+enzymes. \textbf{Allozymes} are a subgroup of isozymes that are coded by a single locus. 
+Their name is derived from \textit{all}ele (alternative forms of a gene) and en\textit{zyme}. Data collection for 
+both types of marker rely on enzymatic reactions and staining so isozymes and allozymes can often be 
+investigated simultaneously.
+Gel electrophoresis allows proteins to be separated based on their physical properties: charge, size, and shape. 
+This method exploits the porous properties of a starch or cellulose acetate gel matrix and the differential charge 
+of the amino acids that make up the allozyme. The rate of movement on a gel, \textit{u}, is dependent on the net
+protein charge \textit{Q}, shape {r}, strength of the electric field \textit{d} and viscosity of the suspension 
+medium \textit{n}:
+
+\begin{equation*}
+u=\frac{Qd}{4\pi^2n}
+\end{equation*}
+
+Charge differences among allozymes are resultant of the 
+differential incorporation of positive (basic at neutral pH) amino acids lysine (Lys), arginine (Arg) and 
+histadine (His) and negative (acidic at neutral pH) amino acids aspartic acid and glutamic acid. 
+
+The strength of allozymes 
+
+
+Cons: only observe non-synonous mutations, only look at water soluble proteins, 
+\subsection{Restriction Length Polymorphisms (RFLPs)}
+
+
+\subsection{Microsatellites \& Minisatellites}
+
+\subsection{Sequencing}
+\subsubsection{Sanger Method}
+Who developed it, how it was done, pros\&cons
+\subsubsection{Pyrosequencing}
+Who developed it, how it was done, pros\&cons
+\subsubsection{RADsequencing}
+Who developed it, how it was done, pros\&cons
+
+\subsection{Single Nucleotide Polymorphisms (SNPs)}
+Who developed it, how it was done, pros\&cons
+\subsubsection{Genotyping by sequencing}
+
+
+\end{document}  
