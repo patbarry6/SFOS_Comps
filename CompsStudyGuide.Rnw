@@ -1,4 +1,4 @@
-\documentclass{article}  
+\documentclass{report}  
 \lstset{breaklines=true} 	
 \usepackage{geometry}                		
 \geometry{letterpaper}                   		
@@ -47,7 +47,7 @@ many of the first few sections come from lecture notes that I took while in Tony
 
 \newpage
 
-\section{A Brief History of the field of Genetics}
+\chapter{A Brief History of the field of Genetics}
 Hooke (1665) coins the term 'cell' after observing cellular structure in cork.
 
 Anton van Leeuwenhoek (1670s) invents compound-like microscope - observes animalcules.
@@ -74,10 +74,10 @@ Pasteur and Tyndall - put it to rest
  
  Correns and deVries discover Mendels work. 
 
-\section{DNA - a review}
+\chapter{DNA - a review}
 In this section I will briefly review the discovery of DNA and review basic principles that will facilitate the 
 understanding of preceding chapters. 
-\subsection{DNA as the hereditary material}
+\section{DNA as the hereditary material}
 Major experiments that lead to the discovery of DNA as the hereditary material. 
 Biological molecule mediates inheritance. 
 
@@ -91,20 +91,18 @@ Fraenkel-Conrat and Singer 1957
 Chargaff 1950
 Linus Pauling
 Watson/Crick/Franklin
-\subsection{DNA structure}
+\section{DNA structure}
 Nucleotides - Nucleosides etc. 
-\subsection{Transcription}
+\section{Transcription}
 Brief description of DNA to mRNA
-\subsection{Translation}
+\section{Translation}
 Brief description of mRNA to protein
 
-\section{Molecular Genetic Methods \& Applications}
+\chapter{Molecular Genetic Methods \& Applications}
 
-\subsection{Phenotypic Data}
+\section{Phenotypic Data}
 
-\subsection{Codominant Phenotypic Data}
-
-
+\section{Codominant Phenotypic Data}
 
 
 
@@ -116,8 +114,10 @@ Brief description of mRNA to protein
 
 
 
-\subsection{Mitochondrial DNA (mtDNA)}
-\subsubsection*{History and Description}
+
+
+\section{Mitochondrial DNA (mtDNA)}
+\subsection*{History and Description}
 Mitochondrial DNA (mtDNA) is, as its name suggests, DNA that is found within the mitochondria.
 Coined by Carl Benda in 1898, the word mitochondrion comes from the Greek word \textit{mitos} 
 meaning ``thread" and \textit{khondrion} meaning ` `little granule''. Mitochondria are organelles 
@@ -144,6 +144,8 @@ a good review see Galtier et al. 2009).
 %of the flagellum. When the acrosome reaction occurs, the tail may not enter the egg, effectively eliminating
 %the opportunity to pass on the male mtDNA. In 1999, it was reported by Sutovsky et al. that male
 %mtDNA is tagged with ubiquitin to mark them for later destruction in the embryo. 
+Why is paternal DNA excluded from the cell? Bromaham 2003 proposes that 
+(1) 
 
 Mitochonrial DNA in multicellular organisms is cirular and double stranded. In unicellular organisms mtDNA
 is linearly organized DNA with telomeres and telemorase. In mammals, mtDNA encodes 37 genes (13 proteins, 
@@ -169,7 +171,7 @@ responsible for initiating replication and transcription.
 the yellow segments are the tRNA genes, and the orange are the rRNA subunits.}\label{fig:mtDNA}
 \end{figure}
 
-\subsubsection*{Evolution of mtDNA molecule}
+\subsection*{Evolution of mtDNA molecule}
 The bacterial genome from which mtDNA arose has gradually shrunk over time. Genes from the 
 original genome have been transfered either to the nucleus or to other organelles. As genes are 
 transposed to the nucleus a copy can remain in the mitochondria making nuclear-mitocondrial dna 
@@ -183,7 +185,9 @@ slippage. Larger differences may be due to duplication or deletions -> might be 
 Aerobic respiration takes place within the mitochondria and a major byproduct of ATP synthesis are
 reactive oxygen species, specifically superoxide and hydrogen peroxide. These free radicals produce a 
 highly mutagenic envornment for mtDNA. This coupled with
-a limited repair mechanism leads to a much higher mutation fixation rate. Mutation rates vary among taxa.
+a limited repair mechanism leads to a much higher mutation fixation rate. 
+Bogenhagen 1999 indicates that mtDNA can conduct base-excision repair, but cannot
+accomplish nucleotide excision repair, nor mismatch repair. Mutation rates vary among taxa.
 A universal molecular clock cannot be assumed. There also exists quite a
 bit of heterogeneity in mutaiton rate among mtDNA loci. The 12s and 16s rDNAs are more conserved
 than the CR. This is due to functional constraints on the proteins encoded.
@@ -228,10 +232,14 @@ then decrease Brown et al 1979. -> rapid evolving sequences are more useful for 
 
 \hrule
 
-\subsubsection*{Use in population genetics and phylogenetics}
-Variation among individuals within and among populaitons. 1970s to 1990 restriction length polymorphism (RFLP)
+\subsection*{Use in population genetics and phylogenetics}
+Population geneticists have used mtDNA to asses two salient questions: (1) what is the 
+state of the exisitng genetic variation in the population and (2) identify reproductivly isolated
+populations. mtDNA displays substantial variation among individuals within and among populaitons. 1970s to 1990 restriction length polymorphism (RFLP)
 analysis of mtDNA dominated phylogenetics. 'Raw data' was restriction fragment digestion profiles - or restriction maps.
 The presence/absence of restriction sites could be used as qualitative data for parsimony trees. 
+
+corrleation between mtDNA diversity and nuclear diversity?
 
 Maternally inherited means it is a 
 promising marker for population genetics. Recent events - colonization, introductions and population bottlenecks
@@ -264,7 +272,7 @@ probability of loss in the previous generation. Avise et al. showed that the pro
 % read this paper and summarize here.
 
 \begin{gather}
-  P(\theta)=\frac{1}{\theta!}\lambda^\theta exp^{-\lambda}, \; E(\theta)=\lambda \ \,\&\, var(\theta)=\lambda \\
+  P(\theta)=\frac{1}{\theta!}\lambda^\theta exp^{-\lambda}, \ E(\theta)=\lambda ,\; \&\,\; var(\theta)=\lambda \\
  P(0)=\frac{1}{0!}\mu^0 exp^{-\mu} \\
  P(0)= exp^{-\mu}
 \end{gather}
@@ -329,7 +337,7 @@ As a result inferences made from nuclear and mtDNA will be discordant.
 
 
 
-\subsubsection*{DNA Barcoding}
+\subsection*{DNA Barcoding}
 Recently, the use of short segments of mtDNA for taxonomic identification has been proposed. 
 The basic theory is that we can use a short segment of DNA (a barcode) to identify an unidentified individual 
 to species Hebert 2004. Later the amount of intraspecific divergence relative to interspecific divergence was proposed as a method
@@ -348,7 +356,7 @@ Due to incomplete lineage sorting the COI gene may not reflect the true relation
 
 
 
-\subsection{Allozymes \& Isozymes}
+\section{Allozymes \& Isozymes}
 Lacking the ability to look directly at the entire genome, early genetic studies relied on small bits of translated 
 genomic regions. DNA is transcribed to mRNA which is then translated to protein (See Chapter 2). Consequently,
 proteins represent a way of looking at variation within DNA sequences. Proteins are polypeptides 
@@ -377,22 +385,22 @@ The strength of allozymes
 
 
 Cons: only observe non-synonous mutations, only look at water soluble proteins, 
-\subsection{Restriction Length Polymorphisms (RFLPs)}
+\section{Restriction Length Polymorphisms (RFLPs)}
 
 
-\subsection{Microsatellites \& Minisatellites}
+\section{Microsatellites \& Minisatellites}
 
-\subsection{Sequencing}
-\subsubsection{Sanger Method}
+\section{Sequencing}
+\subsection{Sanger Method}
 Who developed it, how it was done, pros\&cons
-\subsubsection{Pyrosequencing}
+\subsection{Pyrosequencing}
 Who developed it, how it was done, pros\&cons
-\subsubsection{RADsequencing}
+\subsection{RADsequencing}
 Who developed it, how it was done, pros\&cons
 
-\subsection{Single Nucleotide Polymorphisms (SNPs)}
+\section{Single Nucleotide Polymorphisms (SNPs)}
 Who developed it, how it was done, pros\&cons
-\subsubsection{Genotyping by sequencing}
+\subsection{Genotyping by sequencing}
 
 
 \end{document}  
