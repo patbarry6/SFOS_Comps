@@ -119,40 +119,27 @@ Brief description of mRNA to protein
 \section{Mitochondrial DNA (mtDNA)}
 \subsection*{History and Description}
 Mitochondrial DNA (mtDNA) is, as its name suggests, DNA that is found within the mitochondria.
-Coined by Carl Benda in 1898, the word mitochondrion comes from the Greek word \textit{mitos} 
+The word mitochondrion, coined by Carl Benda in 1898,  comes from the Greek word \textit{mitos} 
 meaning ``thread" and \textit{khondrion} meaning ` `little granule''. Mitochondria are organelles 
 found in most eukaryotic cells (plants, animals, and 
 fungi) that generate adenosine triphosphate (ATP) from the phosphorylation of ADP through
 cellular respiration. Details about the citric acid cycle (Krebs cycle) and the electron transport % should I add that mtDNA was discovered by two teams of scientists?%
-chain which take pyruvate (the product of glycolysis) to produce ATP are covered in most 
+chain which take pyruvate (the product of glycolysis) to produce ATP are extensivly covered in most 
 introductory biology text books and are ommitted here. 
 
 Nuclear and mtDNA have different evolutionary histories. It is theorized that mtDNA was derived from
 the circular genome of an endosymbiotic bacteria ~1.5 billion years ago. This theory was first 
-described by Schimper who in 1883 noticed striking similarties between chroplasts within green plants and 
+described by Schimper who in 1883 noticed striking similarties between chloroplasts within green plants and 
 freeliving cyanobacteria. The theory was later formalized by Mereschkowski, a Russian botanist, in 1910 and 
  further advanced by Lynn Margulis in 1967. 
-
-Mitochondrial DNA is predominantly maternally inherited. Paternal DNA is eliminated at different steps of 
-fertilization depending on the taxa. In crayfish mtDNA is excluded before fertilization Moses 1961. In Ascidia,
-paternal mtDNA is eliminated during fertilization Ursprung and Schabtach 1965 and in the mouse it is eliminated
-after fertilization Sutovsky et al. 1999. Although many studies have suggested otherwise and have been refuted (for
-a good review see Galtier et al. 2009). 
-%There are a few explainations as to why
-%this is the case. Mere dilution might be responsible. The egg has upwards of 1,000,000 mtDNA molecules
-%while sperm have a high estimate of 1,000. The mtDNA on sperm is located on the tail to fuel the beating
-%of the flagellum. When the acrosome reaction occurs, the tail may not enter the egg, effectively eliminating
-%the opportunity to pass on the male mtDNA. In 1999, it was reported by Sutovsky et al. that male
-%mtDNA is tagged with ubiquitin to mark them for later destruction in the embryo. 
-Why is paternal DNA excluded from the cell? Bromaham 2003 proposes that 
-(1) 
 
 Mitochonrial DNA in multicellular organisms is cirular and double stranded. In unicellular organisms mtDNA
 is linearly organized DNA with telomeres and telemorase. In mammals, mtDNA encodes 37 genes (13 proteins, 
 22 tRNAs, and the large and small subunits of the rRNA). The guanine rich strand, referred to
 as the heavy strand (H-strand) encodes 28 genes, while the cytosine rich strand or light strand (L-strand)
 endoceds the 9 other genes. In addition to these coding regions is the control region (CR) that is
-responsible for initiating replication and transcription.
+responsible for initiating replication and transcription. The CR, sometimes refered to as the DLP,
+is composed of the displacement loop (D-loop) and associated transcription promoter regions. 
 
 \begin{figure}[htb]
 \centering
@@ -160,16 +147,35 @@ responsible for initiating replication and transcription.
     \centering
     \includegraphics[width=.99\textwidth]{images/mito.pdf}
     \caption{}\label{fig:mtDNA1}
-  \end{subfigure}%   
+  \end{subfigure}
   \begin{subfigure}[b]{.5\linewidth}
     \centering
     \includegraphics[width=.99\textwidth]{images/mtDNA.pdf}
     \caption{}\label{fig:mtDNA2}
-  \end{subfigure}%     
+  \end{subfigure}
   \caption{(a) A mitochondrion with three circular DNA strands located within the mitochondrial matrix
   (b) Structure of mammalian mtDNA molecule. The green segments represent the 13 protein genes,
 the yellow segments are the tRNA genes, and the orange are the rRNA subunits.}\label{fig:mtDNA}
 \end{figure}
+
+
+There are a few characteristics that make mitochondria a particularly appealing marker to molecular ecologists, however recent research has started to question the assumption that these traits hold true
+across a wide range of taxa (for detailed critiques see White et al. 2008 and Galtier et al. 2009). 
+
+\subsection*{Inheritance}
+First, mtDNA was thought to follow strict maternal inheritance in the 
+majority of animals (Birky 1978 \& Dawid and Blackler 1972). Paternal DNA is eliminated at different steps of 
+fertilization depending on the taxa. In crayfish, which lack flagellum on their sperm, mtDNA is abscent from
+mature sperm Moses 1961 and thus cannot be inherited from the father. In the tunicate \textit{Ascidia nigra},
+paternal mtDNA is blocked from entering the egg preventing paternal inheritance( Ursprung and Schabtach 1965). In both cow and monkeys
+Sutovsky et al. (1999) suggest that ubiquination of mitochondria that occurs during spermatogenesis tags
+paternal mtDNA molecules for destruction by proteasomes and lysosomes in the embryo before the 
+third embryonic cleavage. Although many studies have suggested otherwise and have been refuted (for
+a good review see Galtier et al. 2009). 
+
+Why is paternal DNA excluded from the cell? Bromaham 2003 proposes that 
+(1) 
+
 
 \subsection*{Evolution of mtDNA molecule}
 The bacterial genome from which mtDNA arose has gradually shrunk over time. Genes from the 
@@ -402,5 +408,11 @@ Who developed it, how it was done, pros\&cons
 Who developed it, how it was done, pros\&cons
 \subsection{Genotyping by sequencing}
 
+\chapter{Population Genetics}
+\section{Hardy-Weinberg Principle}
+\section{Mutation}
+\section{Drift}
+\section{migration}
+\section{Selection}
 
 \end{document}  
