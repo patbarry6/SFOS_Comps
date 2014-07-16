@@ -77,6 +77,7 @@ Pasteur and Tyndall - put it to rest
 \chapter{DNA - a review}
 In this section I will briefly review the discovery of DNA and review basic principles that will facilitate the 
 understanding of preceding chapters. 
+
 \section{DNA as the hereditary material}
 Major experiments that lead to the discovery of DNA as the hereditary material. 
 Biological molecule mediates inheritance. 
@@ -97,24 +98,6 @@ Nucleotides - Nucleosides etc.
 Brief description of DNA to mRNA
 \section{Translation}
 Brief description of mRNA to protein
-
-\chapter{Molecular Genetic Methods \& Applications}
-
-\section{Phenotypic Data}
-
-\section{Codominant Phenotypic Data}
-
-
-
-
-
-
-
-
-
-
-
-
 
 \section{Mitochondrial DNA (mtDNA)}
 \subsection*{History and Description}
@@ -210,20 +193,7 @@ tanspositions and inversions occuring.
 Zhang and Hewitt 2003 ``mitochondrial DNA can be the cause of fortune, regret or headache'' in describing
 the selection of mtDNA over other marker types. In plants the mutational rate is very slow Wolfe 1987, but 
 it seems that mutational rates for plants is highly variable. Cho, Y 2004 show some of the highest mutational
-rates in plants! Very high recombination rate Palmer and Herbon 1988. 
-
-\hrule
-
-- 1970s to 1990 RFLP analysis of mtDNA dominated phylogenetics
-- swtiched to DNA sequencing of mtDNA
-- you can isolate mtDNA from other DNA by efficiently sparation of cytoplasm from cell nuclei.
-Soft tissue is minced, homogenized and centrifuged at low speed (700 x g) to remove nuclei and cellular debris.
-then centriguation at higher speed 20,000 x g pellets mitochondria.
-CsCl-EtBr gradient centrifugation at speeds in excess of 160,000 x g makes mtDNA appear as a discete band 
-that you can remove with a hypodermic needle and purify further with dialysis. 
-- this was particularly fortuitous because organelle DNA can be transfered to the nucleus- sequences 
-related to cytoplasmic genes now also exist as functionless derivaties in the nuclear genome 
-Paralogous pseudogenes can wreak havoc on phylogenetic inference if they aren't accounted for. 
+rates in plants! Very high recombination rate Palmer and Herbon 1988.
 
 
 
@@ -234,11 +204,9 @@ mutations accumulate rapidly in nucleotide positions that have less selective co
 then decrease Brown et al 1979. -> rapid evolving sequences are more useful for population level studies
 
 
+\subsection*{mtDNA in molecular ecology}
 
 
-\hrule
-
-\subsection*{Use in population genetics and phylogenetics}
 Population geneticists have used mtDNA to asses two salient questions: (1) what is the 
 state of the exisitng genetic variation in the population and (2) identify reproductivly isolated
 populations. mtDNA displays substantial variation among individuals within and among populaitons. 1970s to 1990 restriction length polymorphism (RFLP)
@@ -354,13 +322,11 @@ categorizing the interspecies divergence.
 Due to incomplete lineage sorting the COI gene may not reflect the true relationships among species. This is one of the various critiques of using a single locus for species delineation (Moritz \& Cicero, 2004; Meyer \& Paulay, 2005; Will, Mishler \& Wheeler, 2005). 
 
 
+\chapter{Molecular Genetic Markers}
 
-%%% End mtDNA %%%
+\section{Phenotypic Data}
 
-
-
-
-
+\section{Codominant Phenotypic Data}
 
 \section{Allozymes \& Isozymes}
 Lacking the ability to look directly at the entire genome, early genetic studies relied on small bits of translated 
@@ -391,12 +357,34 @@ The strength of allozymes
 
 
 Cons: only observe non-synonous mutations, only look at water soluble proteins, 
+
 \section{Restriction Length Polymorphisms (RFLPs)}
+
+\section {AFLPs}
 
 
 \section{Microsatellites \& Minisatellites}
 
+\section{RAPiD}
+
 \section{Sequencing}
+Sequences are the ideal molecular data. If we had full genome sequences from all individuals in a study it would
+be awesome. All other molecular markers discussed so far are just small snippets of the genome that we assume, if 
+randomly sampled, are descriptive of the rest of the genome. Many of the previous markers rely on sequencing for their development. Sequencing has been around since the mid 1970's, but new
+methods are currently being developed that improve upon these existing methods and make sequencing large
+pieces of the genome a much more economical endeavor.
+
+When comparing each type of sequencing method the pros and cons that would determine its utility and
+eventually its use by researchers can be put into four broad categories:
+\itemize{}
+\item{Read length}
+\item{Speed}
+\subitem{Throughput}
+\subitem{Automation of sample handling}
+\item{Accuracy}
+\item{Cost}
+
+\subsection{Maxam \& Gilbert method}
 \subsection{Sanger Method}
 Who developed it, how it was done, pros\&cons
 \subsection{Pyrosequencing}
@@ -408,11 +396,15 @@ Who developed it, how it was done, pros\&cons
 Who developed it, how it was done, pros\&cons
 \subsection{Genotyping by sequencing}
 
+
+
+
 \chapter{Population Genetics}
 \section{Hardy-Weinberg Principle}
 \section{Mutation}
 \section{Drift}
 \section{migration}
 \section{Selection}
+
 
 \end{document}  
