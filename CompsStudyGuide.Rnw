@@ -376,17 +376,67 @@ pieces of the genome a much more economical endeavor.
 
 When comparing each type of sequencing method the pros and cons that would determine its utility and
 eventually its use by researchers can be put into four broad categories:
-\itemize{}
-\item{Read length}
-\item{Speed}
-\subitem{Throughput}
-\subitem{Automation of sample handling}
-\item{Accuracy}
-\item{Cost}
+\begin{itemize}
+\item{\textit{Read length}} - Ideally we would be able to generate one long sequence, but usually reads are 100bp -1000bp and short fragments need to be aligned to make larger sequences.
+\item{\textit{Speed}} - The time it takes to generate samples involves sample preparation, sequencing, scoring, and
+alignment.
+\item{\textit{Accuracy}} - One, if not the most important, attributes is generating good quality nucleotide scores. 
+\item{\textit{Cost}} - If a method is not economical it is unlikely to be adopted by many research labs.
+\end{itemize}
+There are often tradeoffs between each of these attributes and what one lab values in generating sequence
+data may not be what other labs value. As a result many labs differ in what technology they have adopted. The
+platforms on which the technology is developed and implemented are not cheap and the technology is rapidly
+changing. 
 
-\subsection{Maxam \& Gilbert method}
+
+
 \subsection{Sanger Method}
-Who developed it, how it was done, pros\&cons
+Sanger and Coulson developed the \textit{plus and minus} method in 1975. This method took used \textit{E. coli}
+DNA pol I and bacteriophage T4 DNA pol with different nucleoside triposphates. DNA pol I first extends the primer copying the template strand in the presence of four deoxyriobotriphoshates, one of which is labeled with $^{32}P$.
+This should create many copes of different length. From previous research it was shown that DNA polymerase in
+the absence of one nucleotide, elongation would proceed until the position where the missing base should go. 
+Using the partially elongated pieces from the first round of replication, Sanger \& Coulson used a \textit{minus} system, lacking one nucleotide, to deduce the sequences of each fragment up to the missing residue. Four different treatments
+need to be done, one for each nucleotide. The \textit{plus} system is based on the research of Englund (1972) showing
+that in the presence of a single nucleotide, DNA pol from T4 will degrade dsDNA from its 3' end. The exonuclease
+activity is regulated by the presence of the nucleotides present - degradation only occurs in the absence of the 
+nucleotides. This method was applied to the mixture obtained from the first elongation mixture produced, again
+each nucleotide was done separately, so that when fractionated by electrophoresis bands will indicate the positions
+of each residue in the sequence. The products in the \textit{plus} system will be one residue larger than those in 
+the \textit{minus} system. 
+
+\begin{figure}[h]
+\centering
+     \includegraphics[width=.5\textwidth]{images/Plus_Minus.pdf}
+    \caption{The \textit{plus minus} method of sequencing DNA developed by Sanger and Coulson in 1975}\label{fig:+/-}
+\end{figure}
+
+A couple problems were encountered. First, all possible length fragments should be created in the initial elongation
+step. This was, often, not the case. Certain products were often found in high amounts while little or no yield of 
+other fragment lengths were observed. Second, often artifact bands were observed making the inference of the
+target sequence difficult. Third, the accuracy of the sequence was somewhat suspect and relied on cooberation
+with amino acid sequence data. Fourth, it is only applicable to single stranded DNA. Lastly, 50 nucleotides in a couple days!  
+
+In 1977 Sanger et al. proposed the method of DNA sequencing with chain-terminating inhibitors (\textbf{the Sanger
+method}). Adkinson et al. 1969 observed that 2', 3'-dideoxythymidine triphosphate has inhibitory ability because ddT 
+lacks a 3'-hydroxy group. If both ddTTP and dTTP are incubated in addition to the other three deoxyribonucleoside triphosphates with a primer and DNA polymerase fragments of different length will be produce each terminating 
+where a dT should have been incorporated. The fragments can be fractionated by electrophoresis on an 
+acrilamide gel. Mixtures with each terminator can be run side by side on an acrylamide gel to infer the complete 
+sequence. 
+
+\begin{figure}[h]
+\centering
+     \includegraphics[width=.5\textwidth]{images/Sanger.pdf}
+    \caption{The Sanger method of DNA sequencing by chain termination.}\label{fig:Sanger}
+\end{figure}
+
+
+This method was better than the \textit{plus minus} method because it did not require a preliminary extension,
+it only required one type of DNA polymerase, had fewer artifact bands, all individual nucleotides in long stretches came
+out as unique bands, and produced longer read lengths.       
+ 
+\subsection{Maxam \& Gilbert method}
+
+
 \subsection{Pyrosequencing}
 Who developed it, how it was done, pros\&cons
 \subsection{RADsequencing}
