@@ -435,7 +435,38 @@ it only required one type of DNA polymerase, had fewer artifact bands, all indiv
 out as unique bands, and produced longer read lengths.       
  
 \subsection{Maxam \& Gilbert method}
+The Maxam \& Gilbert method was described in 1977. The method takes advantage of the fact that 
+certain chemicals can break
+the glycoside and phosphodiester bonds within DNA. The first step in the method consists of labeling the 5' end of a 
+single strand of DNA,
+typically this was done with $^{32}P$, but $^{35}S$ was also commonly used. Second, the bases were modified by
+breaking the glycoside bond between the ribose sugar and the base. Dimethyl sulfate attacks purines 
+while hydrazine attacks prymadines (for a
+comprehensive list see Fig XX which is reproduced from Franca et al 2002). Third, piperdine is used to cleave the 
+phosphodiester bond when the base is displaced. Generally for different treatments were done in the second step
+so that you could unambiguously call all four bases. After the fragments were cleaved the products could be 
+fractionated by electrophoresis with an acrylamide gel. 
 
+\begin{figure}[h]
+\centering
+  \begin{subfigure}[b]{.5\linewidth}
+    \centering
+    \includegraphics[width=.7\textwidth]{images/MG_2.pdf}
+    \caption{}\label{fig:MGpro}
+  \end{subfigure}%   
+  \hfill
+  \begin{subfigure}[b]{.5\linewidth}
+    \centering
+    \includegraphics[width=.99\textwidth]{images/MG_Chem.pdf}
+    \caption{}\label{fig:MGchem}
+  \end{subfigure}%    
+  \caption{(a)   (b) }\label{fig:MG}
+\end{figure}
+
+When the method was developed Maxam \& Gilbert were able to get 100bp reads within a few days. By 1980, they had refined the technique to get 250bp reads and by 1995 the process had been automated by Dolan et al (1995) with 
+500bp sequences. At the time when the method was developed this method was used because it did not rely on PCR
+amplification and it could be easily controlled in the lab. However, the necessity of handling some pretty nasty chemicals
+and the rather long wait times to produce sequence information made adopting new sequencing techniques attractive. 
 
 \subsection{Pyrosequencing}
 Who developed it, how it was done, pros\&cons
