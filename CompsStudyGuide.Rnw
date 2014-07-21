@@ -124,23 +124,21 @@ endoceds the 9 other genes. In addition to these coding regions is the control r
 responsible for initiating replication and transcription. The CR, sometimes refered to as the DLP,
 is composed of the displacement loop (D-loop) and associated transcription promoter regions. 
 
-\begin{figure}[htb]
+\begin{figure}[h]
 \centering
   \begin{subfigure}[b]{.5\linewidth}
     \centering
-    \includegraphics[width=.99\textwidth]{images/mito.pdf}
-    \caption{}\label{fig:mtDNA1}
-  \end{subfigure}
+    \includegraphics[width=.7\textwidth]{images/mito.pdf}
+    \caption{}\label{fig:MGpro}
+  \end{subfigure}%   
+  \hfill
   \begin{subfigure}[b]{.5\linewidth}
     \centering
     \includegraphics[width=.99\textwidth]{images/mtDNA.pdf}
-    \caption{}\label{fig:mtDNA2}
-  \end{subfigure}
-  \caption{(a) A mitochondrion with three circular DNA strands located within the mitochondrial matrix
-  (b) Structure of mammalian mtDNA molecule. The green segments represent the 13 protein genes,
-the yellow segments are the tRNA genes, and the orange are the rRNA subunits.}\label{fig:mtDNA}
+    \caption{}\label{fig:MGchem}
+  \end{subfigure}%    
+  \caption{(a)   (b) }\label{fig:MG}
 \end{figure}
-
 
 There are a few characteristics that make mitochondria a particularly appealing marker to molecular ecologists, however recent research has started to question the assumption that these traits hold true
 across a wide range of taxa (for detailed critiques see White et al. 2008 and Galtier et al. 2009). 
@@ -314,12 +312,17 @@ As a result inferences made from nuclear and mtDNA will be discordant.
 \subsection*{DNA Barcoding}
 Recently, the use of short segments of mtDNA for taxonomic identification has been proposed. 
 The basic theory is that we can use a short segment of DNA (a barcode) to identify an unidentified individual 
-to species Hebert 2004. Later the amount of intraspecific divergence relative to interspecific divergence was proposed as a method
-to identify cryptic species DeSalle, Egan \& Siddall, 2005. Many of these studies focused their efforts on the cytochrome oxidase I subunit (COI). This  approach requires extensive examination of the intraspecies divergence one would expect to see and then 
+to species Hebert 2004. Later the amount of intraspecific divergence relative to 
+interspecific divergence was proposed as a method
+to identify cryptic species DeSalle, Egan \& Siddall, 2005. Many of these studies 
+focused their efforts on the cytochrome oxidase I subunit (COI). This  approach 
+requires extensive examination of the intraspecies divergence one would expect to see and then 
 categorizing the interspecies divergence.
 
 
-Due to incomplete lineage sorting the COI gene may not reflect the true relationships among species. This is one of the various critiques of using a single locus for species delineation (Moritz \& Cicero, 2004; Meyer \& Paulay, 2005; Will, Mishler \& Wheeler, 2005). 
+Due to incomplete lineage sorting the COI gene may not reflect the true relationships among species. 
+This is one of the various critiques of using a single locus for species delineation 
+(Moritz \& Cicero, 2004; Meyer \& Paulay, 2005; Will, Mishler \& Wheeler, 2005). 
 
 
 \chapter{Molecular Genetic Markers}
@@ -370,14 +373,16 @@ Cons: only observe non-synonous mutations, only look at water soluble proteins,
 \section{Sequencing}
 Sequences are the ideal molecular data. If we had full genome sequences from all individuals in a study it would
 be awesome. All other molecular markers discussed so far are just small snippets of the genome that we assume, if 
-randomly sampled, are descriptive of the rest of the genome. Many of the previous markers rely on sequencing for their development. Sequencing has been around since the mid 1970's, but new
+randomly sampled, are descriptive of the rest of the genome. Many of the previous 
+markers rely on sequencing for their development. Sequencing has been around since the mid 1970's, but new
 methods are currently being developed that improve upon these existing methods and make sequencing large
 pieces of the genome a much more economical endeavor.
 
 When comparing each type of sequencing method the pros and cons that would determine its utility and
 eventually its use by researchers can be put into four broad categories:
 \begin{itemize}
-\item{\textit{Read length}} - Ideally we would be able to generate one long sequence, but usually reads are 100bp -1000bp and short fragments need to be aligned to make larger sequences.
+\item{\textit{Read length}} - Ideally we would be able to generate one long sequence, 
+but usually reads are 100bp -1000bp and short fragments need to be aligned to make larger sequences.
 \item{\textit{Speed}} - The time it takes to generate samples involves sample preparation, sequencing, scoring, and
 alignment.
 \item{\textit{Accuracy}} - One, if not the most important, attributes is generating good quality nucleotide scores. 
@@ -391,17 +396,30 @@ changing.
 
 
 \subsection{Sanger Method}
-Sanger and Coulson developed the \textit{plus and minus} method in 1975. This method took used \textit{E. coli}
-DNA pol I and bacteriophage T4 DNA pol with different nucleoside triposphates. DNA pol I first extends the primer copying the template strand in the presence of four deoxyriobotriphoshates, one of which is labeled with $^{32}P$.
-This should create many copes of different length. From previous research it was shown that DNA polymerase in
-the absence of one nucleotide, elongation would proceed until the position where the missing base should go. 
-Using the partially elongated pieces from the first round of replication, Sanger \& Coulson used a \textit{minus} system, lacking one nucleotide, to deduce the sequences of each fragment up to the missing residue. Four different treatments
-need to be done, one for each nucleotide. The \textit{plus} system is based on the research of Englund (1972) showing
-that in the presence of a single nucleotide, DNA pol from T4 will degrade dsDNA from its 3' end. The exonuclease
-activity is regulated by the presence of the nucleotides present - degradation only occurs in the absence of the 
-nucleotides. This method was applied to the mixture obtained from the first elongation mixture produced, again
-each nucleotide was done separately, so that when fractionated by electrophoresis bands will indicate the positions
-of each residue in the sequence. The products in the \textit{plus} system will be one residue larger than those in 
+Sanger and Coulson developed the \textit{plus and minus} method in 1975. 
+This method took used \textit{E. coli}
+DNA pol I and bacteriophage T4 DNA pol with different nucleoside triposphates. 
+DNA pol I first extends the primer copying the template strand in the presence of four 
+deoxyriobotriphoshates, one of which is labeled with $^{32}P$.
+This should create many copes of different length. From previous research it was 
+shown that DNA polymerase in
+the absence of one nucleotide, elongation would proceed until the 
+position where the missing base should go. 
+Using the partially elongated pieces from the first round of replication, Sanger \& Coulson 
+used a \textit{minus} system, lacking one nucleotide, to deduce the sequences of each 
+fragment up to the missing residue. Four different treatments
+need to be done, one for each nucleotide. The \textit{plus} system is based on the 
+research of Englund (1972) showing
+that in the presence of a single nucleotide, DNA pol from T4 will 
+degrade dsDNA from its 3' end. The exonuclease
+activity is regulated by the presence of the nucleotides 
+present - degradation only occurs in the absence of the 
+nucleotides. This method was applied to the mixture obtained from 
+the first elongation mixture produced, again
+each nucleotide was done separately, so that when fractionated by 
+electrophoresis bands will indicate the positions
+of each residue in the sequence. The products in the \textit{plus} 
+system will be one residue larger than those in 
 the \textit{minus} system. 
 
 \begin{figure}[h]
@@ -410,17 +428,28 @@ the \textit{minus} system.
     \caption{The \textit{plus minus} method of sequencing DNA developed by Sanger and Coulson in 1975}\label{fig:+/-}
 \end{figure}
 
-A couple problems were encountered. First, all possible length fragments should be created in the initial elongation
-step. This was, often, not the case. Certain products were often found in high amounts while little or no yield of 
-other fragment lengths were observed. Second, often artifact bands were observed making the inference of the
-target sequence difficult. Third, the accuracy of the sequence was somewhat suspect and relied on cooberation
-with amino acid sequence data. Fourth, it is only applicable to single stranded DNA. Lastly, 50 nucleotides in a couple days!  
+A couple problems were encountered. First, all possible length fragments should 
+be created in the initial elongation
+step. This was, often, not the case. Certain products were often found in high 
+amounts while little or no yield of 
+other fragment lengths were observed. Second, often artifact bands were 
+observed making the inference of the
+target sequence difficult. Third, the accuracy of the sequence was somewhat 
+suspect and relied on cooberation
+with amino acid sequence data. Fourth, it is only applicable to single stranded 
+DNA. Lastly, 50 nucleotides in a couple days!  
 
-In 1977 Sanger et al. proposed the method of DNA sequencing with chain-terminating inhibitors (\textbf{the Sanger
-method}). Adkinson et al. 1969 observed that 2', 3'-dideoxythymidine triphosphate has inhibitory ability because ddT 
-lacks a 3'-hydroxy group. If both ddTTP and dTTP are incubated in addition to the other three deoxyribonucleoside triphosphates with a primer and DNA polymerase fragments of different length will be produce each terminating 
+In 1977 Sanger et al. proposed the method of DNA sequencing with chain-terminating
+ inhibitors (\textbf{the Sanger
+method}). Adkinson et al. 1969 observed that 2', 3'-dideoxythymidine triphosphate has
+ inhibitory ability because ddT 
+lacks a 3'-hydroxy group. If both ddTTP and dTTP are incubated in addition to the other three 
+deoxyribonucleoside triphosphates with a primer and DNA polymerase 
+fragments of different length 
+will be produce each terminating 
 where a dT should have been incorporated. The fragments can be fractionated by electrophoresis on an 
-acrilamide gel. Mixtures with each terminator can be run side by side on an acrylamide gel to infer the complete 
+acrilamide gel. Mixtures with each terminator can be run side by side on an 
+acrylamide gel to infer the complete 
 sequence. 
 
 \begin{figure}[h]
@@ -463,13 +492,69 @@ fractionated by electrophoresis with an acrylamide gel.
   \caption{(a)   (b) }\label{fig:MG}
 \end{figure}
 
-When the method was developed Maxam \& Gilbert were able to get 100bp reads within a few days. By 1980, they had refined the technique to get 250bp reads and by 1995 the process had been automated by Dolan et al (1995) with 
-500bp sequences. At the time when the method was developed this method was used because it did not rely on PCR
-amplification and it could be easily controlled in the lab. However, the necessity of handling some pretty nasty chemicals
-and the rather long wait times to produce sequence information made adopting new sequencing techniques attractive. 
+When the method was developed Maxam \& Gilbert were able to get 100bp reads within a few days. 
+By 1980, they had refined the technique to get 250bp reads and by 1995 the process had been 
+automated by Dolan et al (1995) with 
+500bp sequences. At the time when the method was developed this method was used because 
+it did not rely on PCR
+amplification and it could be easily controlled in the lab. However, the necessity of handling some 
+pretty nasty chemicals
+and the rather long wait times to produce sequence information made adopting new sequencing 
+techniques attractive. 
 
 \subsection{Pyrosequencing}
-Who developed it, how it was done, pros\&cons
+Pyrosequencing is real time DNA sequencing (sequencing by synthesis) that detects the 
+release of PPi as DNA polymerase forms
+phosphodiester bonds between nucleotides. The technique was developed by  Mostafa Ronaghi 
+and Pål Nyrén in XXXX. 
+The really cleaver mechanism behind pyrosequencing is the use of the enzyme luciferase.
+Luciferase is a general class of enzymes used in bioluminescence; the specific one used in 
+pyrosequening
+is that of fireflies \textit{P. pyralis}. The entire process is accomplished in three reactions: 
+
+\begin{equation*}
+\begin{aligned}
+& (DNA)_n + dNTP \xrightarrow{DNA polymerase} (DNA)_{n+1} + PPi \\
+& PPi + APS  \xrightarrow{ATP sulphurylase} ATP + SO_4^{-2}\\
+& PPi + luciferin + O_2 \xrightarrow {luciferase} AMP + PPi + oxyluciferin + CO_2 + hv 
+\end{aligned}
+\end{equation*}
+
+
+First DNA is exposed to one dioxyribonucleic acid at a time. If the nucleotide introduced is the
+complementary base for the next position in the sequence DNA polymerase will encorporate it
+creating a phosphodiester bond and releasing PPi. Another enzyme ATP sulphyrylase converts the
+PPi and APS to ATP and $SO_4^{-2}$. This second reaction is needed to generate ATP that will be used
+by the enzyme luciferase. In the final step the luciferin, a light-emitting compound,
+and PPi react in the presence of oxygen to form AMP, PPi, oxyluciferin, carbon dioxide and light ($hv$).
+After introducing a single nucleotide base, light emission indicates if the base was used by DNA 
+polymerase. The amount of light produced indicates if more than one base is added in sequence. 
+
+\begin{figure}[H]
+\centering
+    \includegraphics[width=.5\textwidth]{images/Luciferase.pdf}
+    \caption{}\label{fig:MGchem} 
+\end{figure}
+
+Pyrosequencing can be divided into two general types: solid and liquid phase. Solid phase was described
+by Ronaghi et al. in 1996. This method requires introducing a single nucleotide, washing the templete 
+thouroughly before subsequent nucleotide additions to remove non-incorporated dNTPs and ATP. The
+liquid phase method was describe by Ronaghi et al. in 1998. Instead of washing the templete between
+dNTP introductions the nucleotides are degraded by the enzyme apyrase.
+ 
+Pyrosequening has some pretty clear advantages over previous methods. The is no need for
+labelled primers or nucleotides. Sequencing solely relies on the emission of light! There is also
+no need for gel electrophoresis, so there is less dealing with acrylamide and other nasty chemicals.
+Sequencing is done rapidly. Chain extension is accomplished in the 2min cycle time. All sequencing is
+accomplished at room temperature and at physiological pH. Over the course of adopting this technology
+some difficulties have been encountered. The solid phase method has issues with signal loss as the template
+is washed repeatedly. Similarly, in the liquid phase method apyrase activity decreases over time such that
+nucleotides and ATP are not completely digested before the next introduction. Despite its advantages  
+pyrosequening is not a technique that many people will be adopting in the future. The GS FLX platform 
+could read 400Mb in a 10 hour run, but each run cost between \$5,000 and \$7,000. 
+Roache purchased the technology from Qiagen and promptly discontinued the entire line in 2013 and will
+only be servicing these platforms through mid 2016. 
+
 \subsection{RADsequencing}
 Who developed it, how it was done, pros\&cons
 
