@@ -106,7 +106,8 @@ The word mitochondrion, coined by Carl Benda in 1898,  comes from the Greek word
 meaning ``thread" and \textit{khondrion} meaning ` `little granule''. Mitochondria are organelles 
 found in most eukaryotic cells (plants, animals, and 
 fungi) that generate adenosine triphosphate (ATP) from the phosphorylation of ADP through
-cellular respiration. Details about the citric acid cycle (Krebs cycle) and the electron transport % should I add that mtDNA was discovered by two teams of scientists?%
+cellular respiration. Details about the citric acid cycle (Krebs cycle) and the electron transport 
+% should I add that mtDNA was discovered by two teams of scientists?%
 chain which take pyruvate (the product of glycolysis) to produce ATP are extensivly covered in most 
 introductory biology text books and are ommitted here. 
 
@@ -140,7 +141,8 @@ is composed of the displacement loop (D-loop) and associated transcription promo
   \caption{(a)   (b) }\label{fig:MG}
 \end{figure}
 
-There are a few characteristics that make mitochondria a particularly appealing marker to molecular ecologists, however recent research has started to question the assumption that these traits hold true
+There are a few characteristics that make mitochondria a particularly appealing marker to molecular ecologists, 
+however recent research has started to question the assumption that these traits hold true
 across a wide range of taxa (for detailed critiques see White et al. 2008 and Galtier et al. 2009). 
 
 \subsection*{Inheritance}
@@ -148,7 +150,8 @@ First, mtDNA was thought to follow strict maternal inheritance in the
 majority of animals (Birky 1978 \& Dawid and Blackler 1972). Paternal DNA is eliminated at different steps of 
 fertilization depending on the taxa. In crayfish, which lack flagellum on their sperm, mtDNA is abscent from
 mature sperm Moses 1961 and thus cannot be inherited from the father. In the tunicate \textit{Ascidia nigra},
-paternal mtDNA is blocked from entering the egg preventing paternal inheritance( Ursprung and Schabtach 1965). In both cow and monkeys
+paternal mtDNA is blocked from entering the egg preventing paternal 
+inheritance( Ursprung and Schabtach 1965). In both cow and monkeys
 Sutovsky et al. (1999) suggest that ubiquination of mitochondria that occurs during spermatogenesis tags
 paternal mtDNA molecules for destruction by proteasomes and lysosomes in the embryo before the 
 third embryonic cleavage. Although many studies have suggested otherwise and have been refuted (for
@@ -207,8 +210,10 @@ then decrease Brown et al 1979. -> rapid evolving sequences are more useful for 
 
 Population geneticists have used mtDNA to asses two salient questions: (1) what is the 
 state of the exisitng genetic variation in the population and (2) identify reproductivly isolated
-populations. mtDNA displays substantial variation among individuals within and among populaitons. 1970s to 1990 restriction length polymorphism (RFLP)
-analysis of mtDNA dominated phylogenetics. 'Raw data' was restriction fragment digestion profiles - or restriction maps.
+populations. mtDNA displays substantial variation among individuals within and among 
+populaitons. 1970s to 1990 restriction length polymorphism (RFLP)
+analysis of mtDNA dominated phylogenetics. 'Raw data' was restriction fragment 
+digestion profiles - or restriction maps.
 The presence/absence of restriction sites could be used as qualitative data for parsimony trees. 
 
 corrleation between mtDNA diversity and nuclear diversity?
@@ -227,9 +232,11 @@ mtDNA is a single molecule and as such represents loci that are completely linke
 Despite differences in the mutational rate among loci, it is just one look 
 at the evolutionary history. Stochastic processes such as drift as well as selection will influence all mitochondrion
 loci. This look is also only the matrilineal history. Some studies have used both mtDNA
-and noncombining regions of the Y chromosome to look at population structure differences among sexes. The effective
+and noncombining regions of the Y chromosome to look at population structure differences 
+among sexes. The effective
 population size of mtDNA is at most (if we have 1:1 sex ratios) 1/4 that of nuclear autosomal DNA. A lower 
-effective population size results in a faster lineage sorting rate and higher allele extinction rate. % rewrite this sentence to make it clearer!
+effective population size results in a faster lineage sorting rate and higher allele 
+extinction rate. % rewrite this sentence to make it clearer!
 Selection not a huge deal if character states (nucleotides) are still synapomorphic. Does effect estimation 
 of divergence times though!
 
@@ -425,7 +432,8 @@ the \textit{minus} system.
 \begin{figure}[h]
 \centering
      \includegraphics[width=.5\textwidth]{images/Plus_Minus.pdf}
-    \caption{The \textit{plus minus} method of sequencing DNA developed by Sanger and Coulson in 1975}\label{fig:+/-}
+    \caption{The \textit{plus minus} method of sequencing DNA developed 
+by Sanger and Coulson in 1975}\label{fig:+/-}
 \end{figure}
 
 A couple problems were encountered. First, all possible length fragments should 
@@ -555,11 +563,93 @@ could read 400Mb in a 10 hour run, but each run cost between \$5,000 and \$7,000
 Roache purchased the technology from Qiagen and promptly discontinued the entire line in 2013 and will
 only be servicing these platforms through mid 2016. 
 
-\subsection{RADsequencing}
-Who developed it, how it was done, pros\&cons
+\subsection{Massively parallel signature sequencing}
+Massively parallel signature sequencing is a technique developed in the 1990s by Lynx therapeutics. It is a 
+complicated bead based sequencing method that uses adapter ligation and decoding to sequence in chunks
+of four nucleotides at a time. Because the process was so complex the method was never adopted by any
+research labs other than Lynx. They predominantly used it for gene expression sequencing. Lynx merged with
+Solexa, which was later aquired by Illumina, but the technology quickly became obsolete as much less complicated
+approaches were designed. 
+
+The general method is to attach anti-tags to microbeads, prepare cDNA with 5' flourcensent primers and 3' tags
+by cloning them into a vector, load the beads with the labeled cDNA, sort the beads using flourecent-activated 
+cell sorting (FACS), ligate an adapter to the cDNA, use probes to read four bases that are exposed to the adapter, 
+then use an restriction enzyme to expose the next four bases for the next adapter. Generally you get ~17bp of
+good sequence, but you also get a measure of the amount of mRNA in the cell. The microbeads are prepared
+with a 3' spacer and the anti-tag. The sample mRNA is prepared by creating cDNA, labeling it with biotin so
+that it sticks to the microbeads, inserting it into the vector creating tag-cDNA conjugate libraries, which were
+then amplified using the flanking PCR primers. The amplified DNA was made single stranged and incubated 
+with the anti-tag microbeads. The beads with the highest flourescence are sorted out and sequencing is started.
+The sequencing process begins by cleaving the cDNA template using DpnII producing a 3-base overhang. 
+The initiating adapter is ligated and 16 decoder probes are used to establish the identity and order of the 
+nucleotides in the sequence four bases at a time. The adapter has a Bbv1 restriction site which 
+codes for cleavage producing a 4bp overhang on the template sequence. This allows for the next adapter to ligate
+and the process to sequence the next 4bp set. Typically this mehtod produced ~17bp of quality sequence information
+and was used extensively in gene expression in house by Lynx. 
+
+ \begin{figure}[H]
+\centering
+  \begin{subfigure}[b]{.5\linewidth}
+    \centering
+    \includegraphics[width=.8\textwidth]{images/MPSS1.pdf}
+  \end{subfigure}% 
+  \begin{subfigure}[b]{.5\linewidth}
+    \centering
+    \includegraphics[width=.8\textwidth]{images/MPSS2.pdf}
+  \end{subfigure}%    
+  \caption{Massively parallel signature sequencing (MPSS) is a 
+complicated bead based sequencing method that uses adapter ligation 
+and decoding to sequence in chunks
+of four nucleotides at a time. }\label{fig:MPSS}
+\end{figure}
+
+\subsection{Polony Sequencing}
+Developed by Church at Harvard in XXXX. This method uses in vitro paired-tag library with emulsion PCR, 
+automated epifluorescence microscope and ligation based sequencing chemistry. It is open source, 
+which is awesome! Polony sequencing is similar to MPSS in that it uses \textit{in vitro} cloning and hybridization
+and ligation for sequencing. 
+The first step of this method is preparing the paired end-tag library. Do do this genomic DNA is sheered.
+Sheered DNA is then modified by the addition of an A to the 3' end and damaged is 
+repaired by the converstion to 5' phosphorylated, blunt ended DNA. Gel electrophoresis is used to select for
+fragements of 1Kb. Each of these fragments are cirularized using a T-tailed 30bp long synthetic 
+oligonucleotide (T30) which has two MmeI recognition sites that cut within the template strand sequence.
+Rolling circle amplification increases the number of amplicon and MmeI is used to cut our the T30 sequence
+flanked by ~17-18bp of the sequence. Emulsion PCR (ePCR) primers, specificcally FDV2 and RDV2, are
+ligated onto the fragment and PCR is used to obtain a library of 135bp fragments (FDV2 primer - sequence - 
+T30 - sequence - RDV2 primer). This fragment is then amplified many times over on the surface of a streptavidin
+coated bead. The beads are preloaded with biotin labeled forward primer. The beads, PCR mixture, paired end-tag
+library are all mixed to create an emulsion. Theoretically one drop of water in the oil emulsion has one bead
+and one molecule of DNA attached. PCR is performed to produce either beads with zero (if no DNA molecule is 
+bound to the bead), clonal (if 1 DNA molecule is bound to the bead), or non-clonal (if multiple DNA molecules are 
+bound to the bead). After PCR, the emulsion is broken with detergent and isopropanol. Beads are then enriched 
+by using plystyrene beads that have been preloaded with biotinylated capture oligonucleotides. These beads 
+bind to beads that have amplified DNA. Beads lacking amplified DNA can be separated out with centrifugation.
+An amino cap is added to the 3’ end of both unextended forward ePCR primers and the RDV segment of template DNA. 
+A coverslip is washed and treated with aminosilane to allow covalent coupling of DNA. The amplified enriched beads are 
+then mixed with acrylamide and poured inot a shallow mold framed by a teflon coated microscope slide. The coverslip
+is placed over the bead/acrylamide mix and allowed to polymerize after which the slide is removed. DNA sequencing
+is accomplished by introducing anchor primers through the cell and allowing them to hybridize with the 3' or 5' end of 
+the genomic DNA tags. The anchor primers are then ligated to fluorescently labelled degenerate nonomers. 
+These nonamers are 9 bases long and are differentially
+labeled allowing the identification of which base is located in the query position specific to the nonamer. 
+The fixation of the fluorescent molecule signals the identity of the base. 
+The primer and nonomer complex is then stripped off and a new primer is replaced so that the next fluorescently 
+labeled nonomer witht eh query position shifted one base can be ligated. 
+
+\begin{figure}[H]
+\centering
+    \includegraphics[width=.5\textwidth]{images/Polony.pdf}
+    \caption{}\label{fig:MGchem} 
+\end{figure}
+
+This process produces millions of ~26bp reads (13bp on either end), however, only about 1 bit 
+for every 10,000 bits collected is useful. The technology was licensed to Agencourt Biosciences, later 
+picked up by Applied Biosystems. The methodology forms the basis for the ABI solid sequencing method.
+
 
 \section{Single Nucleotide Polymorphisms (SNPs)}
 Who developed it, how it was done, pros\&cons
+
 \subsection{Genotyping by sequencing}
 
 
