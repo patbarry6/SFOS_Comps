@@ -402,7 +402,7 @@ changing.
 
 
 
-\subsection{Sanger Method}
+\subsection*{Sanger Method}
 Sanger and Coulson developed the \textit{plus and minus} method in 1975. 
 This method took used \textit{E. coli}
 DNA pol I and bacteriophage T4 DNA pol with different nucleoside triposphates. 
@@ -471,7 +471,7 @@ This method was better than the \textit{plus minus} method because it did not re
 it only required one type of DNA polymerase, had fewer artifact bands, all individual nucleotides in long stretches came
 out as unique bands, and produced longer read lengths.       
  
-\subsection{Maxam \& Gilbert method}
+\subsection*{Maxam \& Gilbert method}
 The Maxam \& Gilbert method was described in 1977. The method takes advantage of the fact that 
 certain chemicals can break
 the glycoside and phosphodiester bonds within DNA. The first step in the method consists of labeling the 5' end of a 
@@ -510,7 +510,7 @@ pretty nasty chemicals
 and the rather long wait times to produce sequence information made adopting new sequencing 
 techniques attractive. 
 
-\subsection{Pyrosequencing}
+\subsection*{Pyrosequencing}
 Pyrosequencing is real time DNA sequencing (sequencing by synthesis) that detects the 
 release of PPi as DNA polymerase forms
 phosphodiester bonds between nucleotides. The technique was developed by  Mostafa Ronaghi 
@@ -563,7 +563,7 @@ could read 400Mb in a 10 hour run, but each run cost between \$5,000 and \$7,000
 Roache purchased the technology from Qiagen and promptly discontinued the entire line in 2013 and will
 only be servicing these platforms through mid 2016. 
 
-\subsection{Massively parallel signature sequencing}
+\subsection*{Massively parallel signature sequencing}
 Massively parallel signature sequencing is a technique developed in the 1990s by Lynx therapeutics. It is a 
 complicated bead based sequencing method that uses adapter ligation and decoding to sequence in chunks
 of four nucleotides at a time. Because the process was so complex the method was never adopted by any
@@ -603,7 +603,7 @@ and decoding to sequence in chunks
 of four nucleotides at a time. }\label{fig:MPSS}
 \end{figure}
 
-\subsection{Polony Sequencing}
+\subsection*{Polony Sequencing}
 Developed by Church at Harvard in XXXX. This method uses in vitro paired-tag library with emulsion PCR, 
 automated epifluorescence microscope and ligation based sequencing chemistry. It is open source, 
 which is awesome! Polony sequencing is similar to MPSS in that it uses \textit{in vitro} cloning and hybridization
@@ -634,7 +634,7 @@ These nonamers are 9 bases long and are differentially
 labeled allowing the identification of which base is located in the query position specific to the nonamer. 
 The fixation of the fluorescent molecule signals the identity of the base. 
 The primer and nonomer complex is then stripped off and a new primer is replaced so that the next fluorescently 
-labeled nonomer witht eh query position shifted one base can be ligated. 
+labeled nonomer with the query position shifted one base can be ligated. 
 
 \begin{figure}[H]
 \centering
@@ -646,9 +646,137 @@ This process produces millions of ~26bp reads (13bp on either end), however, onl
 for every 10,000 bits collected is useful. The technology was licensed to Agencourt Biosciences, later 
 picked up by Applied Biosystems. The methodology forms the basis for the ABI solid sequencing method.
 
+\subsection*{Illumina (Solexa) sequencing}
+Solexa founded by Shankar Balasubramanian and David Klenerman in 1998 developed a sequencing technique
+that uses colony amplification of DNA fragments on a flowcell combined with erversible terminator nucleotides 
+for massively parallel sequencing by synthesis. Solexa merged with Lynx and was later aquired by Illumina. 
+
+The basic method consists of attaching DNA to the surface of a flowcell, bridge amplification, and sequencing 
+by synthesis. The DNA is first fragmented and adapters are ligated to both ends. The DNA is then made single 
+stranded and bound to the surface of a flow cell channel. The flow cell is made of up 8 lanes, each of which 
+has 3 columns with 100 tiles per column. has dense lawns of primers. Bridge amplification
+is accomplished by introducing unlabelled nucleotides nad enxymes. The dense lawns of primers use the newly 
+attached fragments as a templete making dsDNA. The dsDNA is denatured and the cycle is repeated yieldign dense
+clonal colonies. Sequencing is then done on the flowcell that has dense clonal colonies. Similar to Sanger sequencing, 
+this method of sequencing takes advantage of being able to add a special nucleotide that inhibits the addition of another
+base by blocking addition at the 3'OH. Instead of using ddNTP that that effectivly block all further addition of bases
+this method uses reversible terminator nucleotides that when added block the addition of another nucleotide until
+an image has been take of the fluorescence of the colony indicating the last base added after which 
+enzymatic cleavage removes the 3'OH block and fluorecent dye allowing the incorporation of the next nucleotide.  
+
+\begin{figure}[H]
+\centering
+    \includegraphics[width=.5\textwidth]{images/Solexa.pdf}
+    \caption{}\label{fig:MGchem} 
+\end{figure}
+
+Solexa allows the rapid accumulation of sequence data. You end up with ~40 million reads per run and 
+1 billion base pair per run. All four nucleotides being present during sequencing minimizes
+incorporation bias. 
+There are a few downsides to Solexa sequencing. Reads are on average 36bp. While reads 100bp in length
+are often cited, error rates at 36bp are about 2\%. With such small reads, de novo assembly is impossible, so without 
+a reference genome for alignment you're SOL.  
+
+\subsection*{SOLiD sequencing}
+SOLiD sequenicng uses the same basic method as Polony sequencing - sequencing by ligation. DNA libraries are first
+contructued by fragmenting the DNA and then adding adapters. DNA is attached to beads and ePCR is used to 
+increase the copy number on each bead. The beads are attached to a glass slide and then sequencing is done via 
+probes that compete for ligation. The main differences specific to the SOLiD platform are the use of P1 adapters 
+for the known primer sequence and the specifics behind the ligation step. 
+While Polony sequencing used nonomers that identified 1 base, the SOLiD platform makes use of 
+fluorecently labelled di-base probes so that two bases can be infered at a time. The di-base probe
+is specific to the first and second position for each ligation reaction. After ligation of a probe an image is taken
+and the fluorecent dye is cleaved off and the next probe and anneal and ligate to reveal two more bases in the
+sequence. Multiple cycles of ligation, flourescent detection and cleaveage are done and then the extension product
+is removed and a new primer complementary to the n-1 position anneals and the next set of ligation cycles are
+performed. In total five rounds of primer reset are completed. 
+
+ \begin{figure}[H]
+\centering
+  \begin{subfigure}[b]{.5\linewidth}
+    \centering
+    \includegraphics[width=.8\textwidth]{images/SOLiD1.pdf}
+  \end{subfigure}% 
+  \begin{subfigure}[b]{.5\linewidth}
+    \centering
+    \includegraphics[width=.8\textwidth]{images/SOLiD2.pdf}
+  \end{subfigure}%    
+  \caption{ }\label{fig:SOLiD}
+\end{figure}
+
+Having a di-base probe means that each query position of the probe is assessed in two rounds of primer reset making
+this type of assay very accurate. Some issues with palindromic seqeunces have been noted (Yu-Feng Huang et al. 2012). 
+
+Applications: Sequencing of course. Transcriptome for non-model organisms. Microarrays are limited to what is on the chip, which is 
+not the case for sequencing. Expression profiling is possible as quantitative reads have been done!
+
+\subsection*{Ion Torrent semiconductor sequencing}
+There is nothing really all that novel about the chemistry behind how the sequencing is accomplished, 
+what is novel is the detection method. The Ion Torrent is able to detect hydrogen ions that are 
+released as DNA polymerization occurs. Similar to pyrosequencing that detects the release of light, 
+the special semiconductor is hypersensative to hydrogen ions (ISFET). First a DNA library is constructed by 
+fragmenting DNA and adding adapters. Fragmented DNA is then placed on a microbead and amplified.
+ Each bead then occupies a microwell that is 
+flooded with a single type of nucleotide at a time. If the nucleotide is encorporated by DNA polymerase
+hydrogen ions will be released and detected. If there is a run of a single nucleotide, many ions will 
+be released and a larger signal will be detected. 
+
+Relatively cheap and really fast! A typical run takes about an hour and sequence lengths are typically 
+100-200bp long. Long runs of a single nucleotide are difficult to enumerate (this problem is shared with 
+pyrosequencing). 
+
+\subsection*{DNA nanoball}
+In 2006, Clifford Reid, Radoje Drmanac, and John Curson came together to found Complete Genomics 
+and a proprietary way of sequencing. What is interestesting about these guys is that they do not sell 
+their platform, the company sequences samples sent in by reserachers. Their cost is $20,000 per genome,
+with a minimum of eight genomes. 
+
+DNA is sheered into ~500bp fragments. Then adapters are ligated onto the ends of each fragment. These
+adapters have restriction enzyme recognition sites that are inside the template DNA. Three more 
+rounds of adapter ligation and circularization are performed so that the end product is a circular fragment of 
+DNA that is composed of the first adapter Ad1, a 13bp fragment of genomic DNA, the second adapter Ad2, a 26bp 
+genomic fragment, 
+the forth adapter Ad4, a second 26bp genomic fragment, the third adapter Ad3, and a 13bp genomic 
+fragment of DNA (Figure). 
+
+The circular DNA is then amplified by rolling circle amplification using 
+Phi 29 DNA polymerase. This produces long single stranded DNA and the adapter 
+sequences have palindromic sequences that interact to make the DNA curl up into
+a tight ball ~300 nanometers in diameter. The DNA nanoballs are then attached
+to the surface of a flowcell. The flowcell is silicone chip with 'sticky spots' where 
+one nanoball can attach. Sequencing of genomic DNA between adapters is accomplished
+with the ligation of fluorescently labelled probes. Anchor sequences are introduced to 
+bind to the adapter sequence. T4 DNA ligase and a pool of 4 10-mer DNA probes with 
+degenerate nucleotides on all but 1 position (the query position) are introduced. If the probe
+has a complementary sequence it will bind to the template DNA and the ligase will add the 
+probe to the anchor sequence. The unincorporated probes are washed away and an image
+is taken using the fluorescent dye attached to the probe to indicate which base is in the 
+query position. The anchor/probe complex is removed and a new anchor and pool of 
+probes this time with the query position located one base downstream. After all 10 positions
+of the probe are infered, a new anchor that binds to a different adapter is introduced and 
+the next genomic fragment is sequenced. 
+
+\begin{figure}[H]
+\centering
+    \includegraphics[width=.5\textwidth]{images/Nanoball2.pdf}
+    \caption{}\label{fig:Nanoball} 
+\end{figure}
+
+One advantage to the nanoball method is the high density of the nanoballs on the flowcell.
+Other methods typically have random placement on the flowcell, whereas one nanoball occupies
+one 'sticky spot' on the nanoball array. Also, by using non-chained ligation the compentency 
+of ligations deep in the read are not dependent on earlier ligations. 
+
+The read length are pretty short. This makes the use of a reference genome critical 
+for most applications. Many rounds of PCR amplification also mean that there is 
+increased risk of contamination and errors associated with polymerization.
+
+\subsection*{Heliscope single molecule sequencing}
+
+\subsection*{Single molecule real time sequencing}
 
 \section{Single Nucleotide Polymorphisms (SNPs)}
-Who developed it, how it was done, pros\&cons
+Who developed it, how it was done, pros cons
 
 \subsection{Genotyping by sequencing}
 
