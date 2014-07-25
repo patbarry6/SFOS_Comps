@@ -433,7 +433,7 @@ the \textit{minus} system.
 \centering
      \includegraphics[width=.5\textwidth]{images/Plus_Minus.pdf}
     \caption{The \textit{plus minus} method of sequencing DNA developed 
-by Sanger and Coulson in 1975}\label{fig:+/-}
+by Sanger and Coulson in 1975}\label{fig:Plus_Minus}
 \end{figure}
 
 A couple problems were encountered. First, all possible length fragments should 
@@ -463,7 +463,8 @@ sequence.
 \begin{figure}[h]
 \centering
      \includegraphics[width=.5\textwidth]{images/Sanger.pdf}
-    \caption{The Sanger method of DNA sequencing by chain termination.}\label{fig:Sanger}
+    \caption{The Sanger method of DNA sequencing by chain termination.}
+\label{fig:Sanger}
 \end{figure}
 
 
@@ -541,7 +542,7 @@ polymerase. The amount of light produced indicates if more than one base is adde
 \begin{figure}[H]
 \centering
     \includegraphics[width=.5\textwidth]{images/Luciferase.pdf}
-    \caption{}\label{fig:MGchem} 
+    \caption{}\label{fig:Pyro} 
 \end{figure}
 
 Pyrosequencing can be divided into two general types: solid and liquid phase. Solid phase was described
@@ -639,7 +640,7 @@ labeled nonomer with the query position shifted one base can be ligated.
 \begin{figure}[H]
 \centering
     \includegraphics[width=.5\textwidth]{images/Polony.pdf}
-    \caption{}\label{fig:MGchem} 
+    \caption{}\label{fig:Polony} 
 \end{figure}
 
 This process produces millions of ~26bp reads (13bp on either end), however, only about 1 bit 
@@ -667,7 +668,7 @@ enzymatic cleavage removes the 3'OH block and fluorecent dye allowing the incorp
 \begin{figure}[H]
 \centering
     \includegraphics[width=.5\textwidth]{images/Solexa.pdf}
-    \caption{}\label{fig:MGchem} 
+    \caption{}\label{fig:Solexa} 
 \end{figure}
 
 Solexa allows the rapid accumulation of sequence data. You end up with ~40 million reads per run and 
@@ -728,7 +729,7 @@ pyrosequencing).
 \subsection*{DNA nanoball}
 In 2006, Clifford Reid, Radoje Drmanac, and John Curson came together to found Complete Genomics 
 and a proprietary way of sequencing. What is interestesting about these guys is that they do not sell 
-their platform, the company sequences samples sent in by reserachers. Their cost is $20,000 per genome,
+their platform, the company sequences samples sent in by reserachers. Their cost is \$20,000 per genome,
 with a minimum of eight genomes. 
 
 DNA is sheered into ~500bp fragments. Then adapters are ligated onto the ends of each fragment. These
@@ -737,7 +738,7 @@ rounds of adapter ligation and circularization are performed so that the end pro
 DNA that is composed of the first adapter Ad1, a 13bp fragment of genomic DNA, the second adapter Ad2, a 26bp 
 genomic fragment, 
 the forth adapter Ad4, a second 26bp genomic fragment, the third adapter Ad3, and a 13bp genomic 
-fragment of DNA (Figure). 
+fragment of DNA. 
 
 The circular DNA is then amplified by rolling circle amplification using 
 Phi 29 DNA polymerase. This produces long single stranded DNA and the adapter 
