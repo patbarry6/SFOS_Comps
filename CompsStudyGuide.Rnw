@@ -639,7 +639,7 @@ labeled nonomer with the query position shifted one base can be ligated.
 
 \begin{figure}[H]
 \centering
-    \includegraphics[width=.5\textwidth]{images/Polony.pdf}
+    \includegraphics[width=.3\textwidth]{images/Polony.pdf}
     \caption{}\label{fig:Polony} 
 \end{figure}
 
@@ -649,7 +649,7 @@ picked up by Applied Biosystems. The methodology forms the basis for the ABI sol
 
 \subsection*{Illumina (Solexa) sequencing}
 Solexa founded by Shankar Balasubramanian and David Klenerman in 1998 developed a sequencing technique
-that uses colony amplification of DNA fragments on a flowcell combined with erversible terminator nucleotides 
+that uses colony amplification of DNA fragments on a flowcell combined with reversible terminator nucleotides 
 for massively parallel sequencing by synthesis. Solexa merged with Lynx and was later aquired by Illumina. 
 
 The basic method consists of attaching DNA to the surface of a flowcell, bridge amplification, and sequencing 
@@ -667,7 +667,7 @@ enzymatic cleavage removes the 3'OH block and fluorecent dye allowing the incorp
 
 \begin{figure}[H]
 \centering
-    \includegraphics[width=.5\textwidth]{images/Solexa.pdf}
+    \includegraphics[width=.3\textwidth]{images/Solexa.pdf}
     \caption{}\label{fig:Solexa} 
 \end{figure}
 
@@ -773,8 +773,63 @@ for most applications. Many rounds of PCR amplification also mean that there is
 increased risk of contamination and errors associated with polymerization.
 
 \subsection*{Heliscope single molecule sequencing}
+Heliscope sequencing was developed by XXXX. 
+The basic workflow is preparing the DNA library, attaching the library molecules to 
+a flowcell, and then sequencing by synthesis. High molecular weight DNA is first 
+sheered to obtain fragments to work with. Heliscope recommends fragments between 100 \&
+200nt. A poly(dA) tail is next added to the DNA fragments that will bind to complementary 
+sequences on the flowcell. Generating the exact same number of dAs and dTs is extremely difficult
+and in order to only sequence the template it is easier to do some modifications to the 
+anchor sequence on the flowcell before sequencing. Similarly, in order to keep the templete strand from 
+polymerizing and adding
+to its 3' end it must be blocked by adding a dideoxynucleotide with terminal transferase to 
+its 3' hydroxyl end. The commerically available flowcell is prepared with an oligo(dT) sequence that is 50nt 
+long. DNA is exposed to the flowcell and the poly(dA) tail should bind to the oligo(dT) sequence
+on the surface of the flowcell. A 'fill \& lock' step is performed prior to sequencing where unpaired
+dAs on the poly(A) tail are paried and Virtual Terminator nucleotides dATP, dCTP, dGTP are added
+to fill in the template until an non-A is present halting elongation. Taking an image at this time
+provides no information on the base identity, only the position of each DNA molecule 
+capable of sequencing. The fluorescent dye and 3' block on the sequencing strand is then cleaved 
+and the sequencing cycles can progress. During each cycle of the sequencing reaction 
+a single fluorescent nucleotide is added, unincorporated bases are washed away, and an image 
+is taken. Right now the rate limiting step is the image capturing step. 
+
+\begin{figure}[H]
+\centering
+    \includegraphics[width=.4\textwidth]{images/Helicos.pdf}
+    \caption{}\label{fig:Nanoball} 
+\end{figure}
+
+One advantage of this process is the lack of PCR amplification that may introduce bias and
+errors. The addition of single nucleotides at a time requires 4 images per base position leading 
+to long processing times. Similarly, read lengths are typically 32 nt long. 
+
 
 \subsection*{Single molecule real time sequencing}
+Single molecule real time (SMRT) sequening was developed by Eid et al. at PAcific Biosciences. 
+It uses a special nanostructure, a zero mode wave-guide (ZMW), that houses a single 
+DNA polymerase enzyme and single DNA molecule at the bottom of a small well (Fig \ref{fig:SMRT}). 
+The ZMW structure allows the illumination of fluroescent dyes that are being incorporated into the 
+growing DNA chain individually. The fluroescent dye is linked to the phosphate chain such
+that when the phosphodiester bond is formed the dye is cleaved and diffusion carries the 
+fluorescent dye away from the detection area of the chamber. The ZMW chamber 
+is located on a 93x33 well chip. The result is massively parallel real time sequencing of 
+a single molecule of DNA. 
+
+\begin{figure}[H]
+\centering
+    \includegraphics[width=.8\textwidth]{images/SMRT.pdf}
+    \caption{}\label{fig:SMRT} 
+\end{figure}
+
+Researchers have achieved reads between 1.1 \& 7Kb in length. 
+As the chemistry is refined reads have
+progressively lengthened. This is a major advantage as it offers an opportunity for 
+\textit{de novo} genome assembly. Similarly the polymerization chemistry allows for
+methylation detection. The method is not without problems. 
+Only about 1/3 of the ZMWs can be populated with a single DNA polymerase. 
+Similarly, high error rates have been reported for single reads. However,
+when 15 or more reads are done accuracy is $>$99\%. 
 
 \section{Single Nucleotide Polymorphisms (SNPs)}
 Who developed it, how it was done, pros cons
