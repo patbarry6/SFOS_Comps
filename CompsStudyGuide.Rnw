@@ -10,6 +10,8 @@
 \usepackage{listings}
 \usepackage{float}
 \usepackage{subcaption}
+\usepackage{framed}
+
 
 \usepackage{tikz}
 \usetikzlibrary{shapes,arrows,chains}
@@ -130,15 +132,15 @@ is composed of the displacement loop (D-loop) and associated transcription promo
   \begin{subfigure}[b]{.5\linewidth}
     \centering
     \includegraphics[width=.7\textwidth]{images/mito.pdf}
-    \caption{}\label{fig:MGpro}
+    \caption{}\label{fig:Mito1}
   \end{subfigure}%   
   \hfill
   \begin{subfigure}[b]{.5\linewidth}
     \centering
     \includegraphics[width=.99\textwidth]{images/mtDNA.pdf}
-    \caption{}\label{fig:MGchem}
+    \caption{}\label{fig:Mito2}
   \end{subfigure}%    
-  \caption{(a)   (b) }\label{fig:MG}
+  \caption{(a)   (b) }\label{fig:mtDNA}
 \end{figure}
 
 There are a few characteristics that make mitochondria a particularly appealing marker to molecular ecologists, 
@@ -480,7 +482,7 @@ single strand of DNA,
 typically this was done with $^{32}P$, but $^{35}S$ was also commonly used. Second, the bases were modified by
 breaking the glycoside bond between the ribose sugar and the base. Dimethyl sulfate attacks purines 
 while hydrazine attacks prymadines (for a
-comprehensive list see Fig XX which is reproduced from Franca et al 2002). Third, piperdine is used to cleave the 
+comprehensive list see Fig which is reproduced from Franca et al 2002). Third, piperdine is used to cleave the 
 phosphodiester bond when the base is displaced. Generally for different treatments were done in the second step
 so that you could unambiguously call all four bases. After the fragments were cleaved the products could be 
 fractionated by electrophoresis with an acrylamide gel. 
@@ -515,7 +517,7 @@ techniques attractive.
 Pyrosequencing is real time DNA sequencing (sequencing by synthesis) that detects the 
 release of PPi as DNA polymerase forms
 phosphodiester bonds between nucleotides. The technique was developed by  Mostafa Ronaghi 
-and Pål Nyrén in XXXX. 
+and ? in XXXX. 
 The really cleaver mechanism behind pyrosequencing is the use of the enzyme luciferase.
 Luciferase is a general class of enzymes used in bioluminescence; the specific one used in 
 pyrosequening
@@ -593,15 +595,16 @@ and was used extensively in gene expression in house by Lynx.
   \begin{subfigure}[b]{.5\linewidth}
     \centering
     \includegraphics[width=.8\textwidth]{images/MPSS1.pdf}
-  \end{subfigure}% 
+  \end{subfigure}
   \begin{subfigure}[b]{.5\linewidth}
     \centering
     \includegraphics[width=.8\textwidth]{images/MPSS2.pdf}
-  \end{subfigure}%    
+  \end{subfigure}
   \caption{Massively parallel signature sequencing (MPSS) is a 
 complicated bead based sequencing method that uses adapter ligation 
 and decoding to sequence in chunks
-of four nucleotides at a time. }\label{fig:MPSS}
+of four nucleotides at a time. }
+\label{fig:MPSS}
 \end{figure}
 
 \subsection*{Polony Sequencing}
@@ -841,10 +844,298 @@ Who developed it, how it was done, pros cons
 
 \chapter{Population Genetics}
 \section{Hardy-Weinberg Principle}
+
+
 \section{Mutation}
+
+We can easily calculate how allele frequencies will change under the effects of mutation only. 
+Let us assume that we are dealing with a single locus with two alleles $A$ and $a$ with frequencies $p$
+and $q$ respectively. The $A$ allele can mutate to the $a$ allele at the rate $\mu$  ($A\xrightarrow{\mu}a$).
+If we wanted to know the frequency of the $A$ allele in the next generation it would simply be the $A$ alleles
+that did not mutate to $a$ calculated with the equation:
+\begin{equation*}
+p_{t+1}=p_t-p_t*\mu = p_t(1-\mu)
+\end{equation*}
+The change that occurs is simply the difference between the new allele frequency and the old allele frequency. It 
+becomes obvious that the change in allele frequency from one generation to the next is simply a product of 
+the mutation rate and the frequency in the previous generation. 
+\begin{equation*}
+\Delta p=p_{t+1}-p_t
+\end{equation*}
+\begin{equation*}
+\Delta p=p_{t}*(1-\mu)-p_t = -p_t\mu
+\end{equation*}
+
+Let us assume that we are dealing with a single locus with two alleles $A$ and $a$ with frequencies $p$
+and $q$ respectively. The $A$ allele can mutate to the $a$ allele at the rate $\mu$ and the back mutation
+rate is $v$. To calculate the frequency of the $A$ allele in the next generation we have to account for all of 
+the $A$ allele in the current generation, subtract those $A$ alleles that mutate, and add $a$ alleles that
+mutate to $A$ (rate = $v$). 
+\begin{equation*}
+p_{t}=p_{t-1}-p_{t-1}*\mu+(q_{t-1})v
+\end{equation*}
+\begin{equation*}
+p_{t}=p_{t-1}(1-\mu)+(1-p_{t-1})v
+\end{equation*}
+It should be obvious that for mutation rates that are low, in one generation not much will occur. But over
+longer time scales we can have appreciable differences in allele frequencies due to mutation alone.
+In order to get an equation that is easier to work with we have to do a bit of math. 
+\begin{equation}
+p_t=\frac{v}{v+\mu}+\left(p_0 - \frac{v}{v+\mu}\right)(1 - \mu - v)^t
+\end{equation}
+To understand what happens to allele frequencies over a long span of time we can look at the above
+equation. If $t$ is very large then $(1 - \mu - v)^t$ approaches zero. This makes the right side of the 
+equation drop out and $p_{eq}=\frac{v}{v+\mu}$. Generally mutational pressure is so weak that
+it will require thousands of generations for a population to get to this equilibrium frequency. 
+ 
+\section{Inbreeding}
+Inbreeding is caused by mating between relatives. Inbreeding increases homozygosity in much the 
+same way as assortative mating, however it affects all loci in the genome instead of just the one
+responsible for assortative mating. The magnitude of inbreeding can be described by the relative increase in
+homozygosity, or F, the inbreeding coefficient. The inbreeding coefficient is the fractional reduction in 
+heterozygosity relative to a random-mating population.
+\begin{equation}
+F=(H_o-H)/H_o
+\end{equation}  
+Hardy Weinberg expectations (HWE) for the heterozygote genotype $H_o$ is $2pq$. We can replace $H_o$ 
+ to get the expected genotypic frequency in the presence of inbreeding
+ $F=(H-2pq)/2pq = FH_o=H_o-2pq = H_o(1-F) = 2pq$). To get the expected heterozygote frequency we 
+ know that $p=P+1/2H$. If we replace $H$ with $2pq(1-F)$ from above we find that 
+ $p = P+1/2*2pq(1-F) = P+pq(1-F), so P= p-pqF+pqF = p-p+p^2+(p-p^2)F = p^2+Fp-Fp^2 = p^2(1-F) + Fp$
+It is easy to show that the other homozygote genotype frequency is $q^2(1-F)+qF$. 
+
+So how does inbreeding change allele frequencies through time. Let's use an extreme example, something 
+that is able to self fertilize. If we look at just one locus with two alleles (A and a) in the first generation let us
+assume that the alleles are in HWE and the genotypic frequencies are$1/4, 1/2, and 1/4$ for genotypes 
+AA, Aa, and aa respectively. If there is only selfing, in the next generation AA genotypes will only 
+give rise to AA genotypes with a frequency of $1/4*1$. Similarly aa genotypes will produce only aa genotypes
+with frequency $1/4*1$. Individuals that are Aa can produce all three genotypes in a normal Mendialian
+ration of 1/4:1/2:
+
 \section{Drift}
+
 \section{migration}
 \section{Selection}
+
+\newpage
+\section{Mutation drift equilibrium}
+
+We know that in the absence of mutation that we can characterize the change in
+a population due to drift by looking at the inbreeding coefficient. As inbreeding
+increases so does homozygosity. The change in the inbreeding coefficient $f$
+from time $t$ to $t+1$ can be thought of as the SEE SECTION ON DRIFT 
+Recall that f is the probability of identify by decent
+
+\begin{equation} \label{eq:f1}
+f_{t+1}=\frac{1}{2N}+(1-\frac{1}{2N})f_t
+\end{equation}  
+\subsection{Infinite Allele Model (IAM)}
+if we want to incorporate mutation with drift we can make a few assumptions
+and it is a relatively straightforward extension. First, we must assume that 
+all mutations lead to a new allele (the infinite sites model). The probability 
+that an allele mutates is simply $\mu$ and the probability that it stays
+the same is $1-\mu$. For two alleles to be identical by decent in 
+the presence of mutation they cannot have mutated from time $t$ to 
+time $t+1$, so we will need to multiple the above equation by 
+the probability that neither allele mutated, $(1-\mu)^2$. The term is squared
+because either of the two inherited copies has the opportunity to 
+change between the two time periods.
+
+\begin{equation}
+f_{t+1}=(\frac{1}{2N}+(1-\frac{1}{2N})f_t)(1-\mu)^2
+\end{equation}  
+
+If we want to know the equilibrium state, $f$ will not change because of the 
+balancing forces of mutation and selection, so in the above equation 
+$f_{t+1}$ can be replaced by $f_t$. 
+
+\begin{equation} \label{eq:DMeq1}
+\begin{split}
+ f_{e}=(\frac{1}{2N}+(1-\frac{1}{2N})f_t)(1-\mu)^2  \\
+ f_{e}=\frac{1}{2N}(1-\mu)^2+((1-\frac{1}{2N})f_t)(1-\mu)^2\\
+ f_{e}-((1-\frac{1}{2N})f_t)(1-\mu)^2=\frac{1}{2N}(1-\mu)^2\\
+ f_{e}(1-(1-\frac{1}{2N})(1-\mu)^2)=\frac{1}{2N}(1-\mu)^2\\
+ f_{e}=\frac{\frac{1}{2N}(1-\mu)^2}{1-(1-\frac{1}{2N})(1-\mu)^2}\\
+ f_{e}=\frac{\frac{1}{2N}(1-2\mu+\mu^2)}{1-(\frac{2N-1}{2N})(1-2\mu+\mu^2)}\\
+ f_{e}=\frac{\frac{1}{2N}(1-2\mu+\mu^2)}{(-2N\mu^2+4N\mu+\mu^2-2\mu+1)(\frac{1}{2N})}\\
+ f_{e}=\frac{(1-2\mu+\mu^2)}{(-2N\mu^2+4N\mu+\mu^2-2\mu+1)}\\
+\end{split}
+\end{equation}
+At this point we need to make an approximation in order to continue. First, if
+$x$ is small ($1>|x|$) and the function you are working with is of the form
+$f(x) = 1 +ax+bx^2$,
+you can ignore the $bx^2$ term and not change the value of $f(x)$. Similarly,
+if $x$ very small ($|x|<<1$)
+you can ignore the $ax$ term. We have previously stated that
+mutation rates are generally on the order of $10^-3$ to $10^-6$, so 
+we can ignore both the $2\mu$ and $\mu^2$ terms in equation~\ref{eq:DMeq1}. 
+
+\begin{equation} \label{eq:DMeq2}
+\begin{split}
+f_{e}=\frac{1-2\mu+\mu^2}{-2N\mu^2+4N\mu+\mu^2-2\mu+1}\\
+f_{e} \approx \frac{1-2\mu}{4N\mu-2\mu+1}\\
+f_{e} \approx \frac{1}{4N\mu+1}
+\end{split}
+\end{equation}
+
+We can now look at the equilibrium heterozygosity by substituting in 
+$H=1-f$. If you think about the state of alleles over a long time period 
+under the infinite allele model, given enough time allele alleles 
+should mutate to a new state such that if two alleles are identical
+in state, they are also identical by decent. So over time $f_t$ 
+becomes a measure of homozygosity.
+
+\begin{equation} \label{eq:FHet}
+H_{e}=\frac{4N_e\mu}{4N_e\mu+1}
+\end{equation}
+
+This is the equilibrium heterozygosity for the infinite allele, neutral model. 
+It is common to replace $4N_e\mu$ with $\theta$ so that 
+
+\begin{equation} \label{eq:HetEq}
+H_{e}=\frac{\theta}{\theta+1}
+\end{equation}
+
+\subsection{stepwise-mutational model (SMM)}
+This model described by Ohta and Kimura 1973 was developed
+for allozymes and used for microsatellites is characterized by 
+the evolution to adjacent states. 
+
+Ohta and Kimura (cite) found the equilibrium homozygosity ($f$)
+as 
+\begin{equation} \label{eq:HetEqSSM}
+f_{e}=\frac{1}{(8N_e\mu+1)^{1/2}}
+\end{equation}
+which can be rearranged to get the equilibrium heterozygosity
+\begin{equation} \label{eq:HetEqSSM}
+H_{e}=1-\frac{1}{(8N_e\mu+1)^{1/2}}
+\end{equation}
+
+
+\subsection{Finite Site Model}
+If we look at the situation where not every mutation results in 
+a new allele - we now have an finite sites model. Again we will 
+start with inbreeding in the absence of mutation (eq.~\ref{eq:f1})
+and then add to it. For alleles to be IBD in the finite sites model
+they can start as IBD and \textbf{both} don't mutate (with probability
+$(1-\mu)^2$. Similarly, both can mutate to the same allele (with 
+probability $\mu^2/(K-1)$, where $K$ is the number of alleles. 
+
+\begin{equation} \label{eq:FSmodel}
+\begin{split}
+f_{t+1}=\bigg[(1-\mu)^2+\frac{\mu^2}{K-1}\bigg]\bigg[\frac{1}{2N}+(1-\frac{1}{2N})f_t\bigg]
+\end{split}
+\end{equation}
+
+We can begin to simplify this equation in a similar manner to
+what we did above by getting rid of really small terms 
+such as $\mu^2$ or $\mu/N$. 
+
+\begin{equation} \label{eq:FSmodel2}
+\begin{split}
+f_{t+1}=\bigg[(1-\mu)^2+\frac{\mu^2}{K-1}\bigg]\bigg[\frac{1}{2N}+(1-\frac{1}{2N})f_t\bigg]\\
+f_{t+1}=\bigg[1-2\mu+\mu^2+\frac{\mu^2}{K-1}\bigg]\bigg[\frac{1}{2N}+(1-\frac{1}{2N})f_t\bigg]\\
+f_{t+1}=\bigg[1-2\mu\bigg]\bigg[\frac{1}{2N}+(1-\frac{1}{2N})f_t\bigg]\\
+\end{split}
+\end{equation}
+
+By removing the $\frac{\mu^2}{K-1}$ term the equation no longer has any connection to the number of alleles
+and that seems wrong. I have done some reading and some people put in terms for alleles 
+that start as different and mutate to become the same.
+If both mutate to a different type then the term is 
+\begin{equation}
+\mu^2*\frac{k-2}{k-1}\frac{1}{k-1}
+\end{equation}
+And if only one allele mutates to match that term would be 
+\begin{equation} 
+\frac{2\mu(1-\mu)}{k-1}
+\end{equation}
+My problem is this... aren't those just identical in state, not IBD. One generation back they were different
+alleles. After they mutate they are now identical in state, but they will never be identical by decent.
+
+\newpage
+
+\chapter{Evolution}
+\section{Wright's shifting balance theory}
+\begin{quote}
+\textit{In general the most favorable conditions for evolutionary advance are found when these 
+[the processes that affect the genetic composition of populations] are balanced against 
+each other in certain ways, rather than when any one completely dominates the 
+situation.}
+\begin{flushright} Sewall Wright 1942 \end{flushright}
+\end{quote}
+
+Wright developed the shifting balance theory (SBT) as a way to describe how in an adaptive 
+landscape populations with genotypes that are suboptimal can traverse valleys of decreased 
+fitness to arrive at a global fitness maxima. This theory was developed and defended by Wright 
+over the course of much of his career. Main features of the theory were introduced as early as
+early as 1929, but it wasn't until 1970 that the SBT label was adopted. This theory of evolution 
+was criticized by Fisher and and defended by Wright in a series of publications, and is still 
+debated widely.
+Wright's theory  was controversial because it placed great emphasis on the role of population
+subdivision and drift on evolution as opposed to selection as the main driver. Early in his work 
+on guinea pigs Wright noted that gene interactions were  often non-addative (epistatic - 
+\textit{see box 1}).
+Different combinations of alleles at different loci could produce a varying degree of fitnesses. 
+If considered as an n-dimensional space, with n being the number of loci, the genotype combinations
+could be thought of as coordinates in that space with their relative fitnesses defining the $n+1$ 
+dimension forming a fitness landscape. This space could be characterized by peaks and valleys. 
+Wright argued that by natural selection populations would only be able to climb to the top of the 
+nearest peak and would not be able to traverse valleys of suboptimal fitness. Large populations
+living in unchanging environments reach equilibrium. If the mutational rate is increased the population
+would spread to occupy a larger area on the fitness landscape, whereas if selection were to increase
+the population would occupy a smaller area on the landscape. If the landscape were to change due
+to environmental perturbation a large population under moderate selection would track with the 
+change in the fitness landscape and approach the new fitness maximum over time. If the environment
+were ever changing the population will continually change in response (the red queen effect) where 
+to remain in the same place (mean fitness) you have to continually run (change genotypic frequencies).
+In the absence of changing environment, Wright envisioned random drift as the main driver of  evolution.
+If populations are subdivided into smaller demes exchanging few migrants then drift would be the 
+predominant evolutionary force and populations would be able to wander into valleys and explore 
+neighboring genotypic space. Wright divided the process behind SBT into three phases:
+
+\begin{itemize}
+\item Phase 1: Exploring - genetic drift is the main evolutionary force whereby populations are 
+able to move around the genotypic space to areas of potentially lower average fitness. 
+\item Phase 2: Peak climbing - selection is the predominant evolutionary force whereby populations 
+that may have moved to fitness valleys will climb to the nearest fitness peak. 
+\item Phase 3: Migrant pull - migration is the dominate evolutionary force. Populations with higher
+mean fitness will on average produce more offspring and those populations will reach carrying capacity 
+so they will contribute to the migrant gene pool disproportionately. Migrants that successfully introgress 
+into demes located on suboptimal fitness peaks will pull the genotypic frequencies of the recipient 
+population closer tot he donor population. 
+\end{itemize}
+
+The complexity of the theory as well as the lack of a mathematical description made it particularly controversial. 
+Just front eh three phases of the theory we can see that they are somewhat at odds. Genetic drift (phase 1) affects 
+small populations more than large ones whereas selection will affect a large population more than drift (phase 2). It is 
+the interplay of all of these forces over space and time that leads to evolution. It is unclear on what time scale changes
+in the strength of each force could operate. There also exists plenty of ambiguity in what the axes were on the adaptive
+landscape that Wright proposed. 
+
+\begin{framed}
+\textbf{Box 1: Additive vs. Non-additive effects}\\
+Additive genetic effects are those that each individual alleles affect 
+\end{framed}
+
+Wright described the adaptive landscape as a 'field of gene combinations graded with respect to adaptive value'. 
+We can imagine each asia being a locus and genotypes for that locus being discrete positions among the axis. The 
+issue here is that discrete genotypes do not make up a surface. Is this a major issue? Could we re-image this as a 
+cloud of fitness much like an electron cloud where genotypes jump from state to state? IF the axes are taken as allele 
+frequencies (which is how Wright described them later in his publications), then each point no longer represents individual
+genotypes, but the population itself. Also, there is not a straightforward relationship between a populations
+allele frequency and mean fitness, as mean fitness depends on genotypic frequency which requires assumptions 
+about random mating, population size, no migration, mutation or selection in order to estimate from them 
+from allelic frequencies. Phenotypic characters that vary continuously (weight, length, etc.) have also been used 
+in describing the axes of the adaptive landscape, with each point representing an individual. 
+The main hangup here is that the same genotypes don't necessarily
+manifest in identical phenotypes. 
+Fisher downplayed the role of epistasis and drift as major components in evolution. He believed that most populations were
+large enough that drift might be negligible and ecological factors are responsible for shifting the adaptive peaks. If most 
+populations are large, by sheer number of offspring produced there would be more scope for mutation. 'The advantage of large 
+populations in picking up mutations of excessively low mutation rate seems to be overlooked by Wright'. 
+
+
 
 
 \end{document}  
